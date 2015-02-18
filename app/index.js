@@ -33,6 +33,7 @@ module.exports = yeoman.generators.Base.extend({
   writing: {
     app: function () {
       this.fs.copy(
+        //this.templatePath('(**|!bower_components/**|!node_modules/**)'),
         this.templatePath('**'),
         this.destinationPath('')
       );
@@ -58,5 +59,6 @@ module.exports = yeoman.generators.Base.extend({
     this.installDependencies({
       skipInstall: this.options['skip-install']
     });
+    this.spawnCommand('bundle', ['install']);
   }
 });
