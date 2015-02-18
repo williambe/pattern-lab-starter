@@ -17,10 +17,15 @@ module.exports = yeoman.generators.Base.extend({
     ));
 
     var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
+      type: 'list',
+      name: 'cms',
+      message: 'What CMS will this be in?',
+      default: 'Drupal 7',
+      choices: [
+        'Drupal 7',
+        'Drupal 8 (not working)',
+        'No CMS (not working)'
+      ]
     }];
 
     this.prompt(prompts, function (props) {
