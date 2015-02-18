@@ -1,77 +1,47 @@
-# Pattern Lab Starter
+# generator-pattern-lab [![Build Status](https://secure.travis-ci.org/EvanLovely/generator-pattern-lab.png?branch=master)](https://travis-ci.org/EvanLovely/generator-pattern-lab)
 
-## Brief Overview
+> [Yeoman](http://yeoman.io) generator
 
-### Quick install and setup
 
-Required prerequesites: node, ruby.
+## Getting Started
 
-Make sure you have these already installed; if not, run:
+### What is Yeoman?
 
-    npm install grunt-cli --global
-    gem install bundler
-    
-After cloning and changing into that directory, run this to install dependencies:
+Trick question. It's not a thing. It's this guy:
 
-    npm install
-    bundler install
-    bower install
+![](http://i.imgur.com/JHaAlBJ.png)
 
-You may have to run that again for updates; so it may be wise to save this: `npm install && bundler install && bower install`
+Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
 
-### Conventions to Follow
+Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*
 
-- Relative links instead of root relative links for paths (where possible)
-    - Use `../images/logo.png` instead of `/images/logo.png`
+```bash
+npm install -g yo
+```
 
-### Pattern Lab Terms
+### Yeoman Generators
 
-- **Atoms** are basic tags, such as form labels, inputs or buttons. They also include more abstract elements like color palettes, fonts, and animations.
-- **Molecules** are groups of elements that function together as a unit. For example, a form label, search input, and button atom can combine them together to form a search form molecule.
-- **Organisms** can consist of similar and/or disparate molecule types. For example, a masthead organism might consist of a logo, navigation, and search form, while a “product grid” organism might consist of the same product info molecule repeated over and over.
-- **Templates** are comprised mostly of organisms combined together to form page-level objects. Templates mostly focus on content structure (such as character length, image size, etc) rather than the actual content.
-- **Pages** are specific instances of templates and swap out placeholder content with real representative content.
+Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
 
-[More info](http://patternlab.io/about.html)
+To install generator-pattern-lab from npm, run:
 
-    
-## Details
+```bash
+npm install -g generator-pattern-lab
+```
 
-### Configuration
+Finally, initiate the generator:
 
-There are many different pieces of tech and many files that set the preferences for each of them. Here's a list of them and where to find the config file for each.
+```bash
+yo pattern-lab
+```
 
-- Compass/Sass: `source/scss/config.rb` - [docs](http://compass-style.org/help/tutorials/configuration-reference/)
-- Bundler (Ruby Gem Versions): `source/scss/Gemfile` - [docs](http://bundler.io)
-- Pattern Lab: `config/config.ini` - [docs](http://patternlab.io/docs/advanced-config-options.html)
-- Grunt: `Gruntfile.js` and `package.json` - [docs](http://gruntjs.com/configuring-tasks)
-- Bower (library management): `bower.json` and `.bowerrc` - [docs](http://bower.io/)
+### Getting To Know Yeoman
 
-### Advanced Pattern Lab Concepts
+Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
 
-- [Including Patterns in Patterns](http://patternlab.io/docs/pattern-including.html)
-- [Introduction to JSON & Mustache Variables](http://patternlab.io/docs/data-json-mustache.html)
-    - [Creating Pattern-specific Values](http://patternlab.io/docs/data-pattern-specific.html)
-    - [Creating Lists with `listItems` Variable](http://patternlab.io/docs/data-listitems.html)
-- [Linking to Patterns](http://patternlab.io/docs/data-link-variable.html)
-- [Adding Annotations](http://patternlab.io/docs/pattern-adding-annotations.html)
-- [Pattern Lab's Special Query String Variables](http://patternlab.io/docs/pattern-linking.html)
-- [Using styleModifiers](http://patternlab.io/docs/pattern-stylemodifier.html)
-- [Using Pattern States](http://patternlab.io/docs/pattern-states.html)
-- [Using Pattern Parameters](http://patternlab.io/docs/pattern-parameters.html)
-- [Keyboard Shortcuts](http://patternlab.io/docs/advanced-keyboard-shortcuts.html)
-- [Editing the config.ini Options](http://patternlab.io/docs/advanced-config-options.html)
+If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
 
-## More Info
 
-### About Pattern Lab
+## License
 
-- [Pattern Lab Website](http://patternlab.io/)
-- [About Pattern Lab](http://patternlab.io/about.html)
-- [Documentation](http://patternlab.io/docs/index.html)
-- [Demo](http://demo.patternlab.io/)
-
-### About Grunt
-
-- [Grunt Website](http://gruntjs.com)
-- Article by Chris Coyier: [Grunt for People Who Think Things Like Grunt are Weird and Hard ◆ 24 ways](http://24ways.org/2013/grunt-is-not-weird-and-hard/)
+MIT
