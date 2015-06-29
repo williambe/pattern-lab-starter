@@ -10,7 +10,7 @@ var gulp = require('gulp'),
   config = yaml.safeLoad(fs.readFileSync('Gruntconfig.yml', 'utf8'));
 
 gulp.task('styles', function () {
-  gulp.src(config.scssDir + '**/*.scss')
+  return gulp.src(config.scssDir + '**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'expanded'
@@ -28,21 +28,21 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('./css'));
 });
 
-gulp.task('styles:watch', function () {
-  gulp.watch(config.scssDir + '**/*.scss', [
-    'styles'
+gulp.task('styles:watch', ['styles'], function () {
+  return gulp.watch(config.scssDir + '**/*.scss', [
+    'styles',
+    'scsslint'
   ]);
 });
 
 gulp.task('scsslint', function () {
-  gulp.src(config.scssDir + '**/*.scss')
-    .pipe(cache('scsslint'))
+  return gulp.src(config.scssDir + '**/*.scss')
     .pipe(scsslint({
       'config': '.scss-lint.yml',
       'bundleExec': true
-    }))
+    }));
 });
 
-gulp.task('default', function () {
-  return true;
-});
+gulp.task('build', ['compile']);
+gulp.task('compile', ['styles', 'scsslint']);
+gulp.task('default', ['compile', 'styles:watch']);
