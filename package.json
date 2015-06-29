@@ -74,6 +74,7 @@
     "gulp-sass": "^2.0.3",
     "gulp-scss-lint": "^0.2.0",
     "gulp-sourcemaps": "^1.5.2",
+    "gulp-util": "^3.0.6",
     "inquirer": "^0.8.5",
     "js-yaml": "^3.3.1",
     "load-grunt-tasks": "^3.1.0",

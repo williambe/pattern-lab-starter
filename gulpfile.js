@@ -1,5 +1,6 @@
 'use strict';
 var gulp = require('gulp'),
+  gutil = require('gulp-util'),
   sass = require('gulp-sass'),
   sourcemaps = require('gulp-sourcemaps'),
   postcss = require('gulp-postcss'),
@@ -7,9 +8,10 @@ var gulp = require('gulp'),
   scsslint = require('gulp-scss-lint'),
   yaml = require('js-yaml'),
   fs = require('fs'),
+  exec = require('child_process').exec,
   config = yaml.safeLoad(fs.readFileSync('Gruntconfig.yml', 'utf8'));
 
-gulp.task('styles', function () {
+gulp.task('css', function () {
   return gulp.src(config.scssDir + '**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -28,9 +30,9 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('./css'));
 });
 
-gulp.task('styles:watch', ['styles'], function () {
+gulp.task('watch:css', ['css'], function () {
   return gulp.watch(config.scssDir + '**/*.scss', [
-    'styles',
+    'css',
     'scsslint'
   ]);
 });
@@ -43,6 +45,22 @@ gulp.task('scsslint', function () {
     }));
 });
 
+gulp.task('plBuild', function(cb) {
+  exec("php " + config.plDir + "core/builder.php --generate --nocache", function(err, stdout, stderr) {
+    if (err) return cb(err);
+    if (stderr) gutil.log(stderr);
+    if (stdout) gutil.log(stdout);
+    cb();
+  });
+});
+
+gulp.task('watch:pl', ['plBuild'], function() {
+  return gulp.watch(config.plDir + 'source/**/*.{mustache,json}', [
+    'plBuild'
+  ]);
+});
+
 gulp.task('build', ['compile']);
-gulp.task('compile', ['styles', 'scsslint']);
-gulp.task('default', ['compile', 'styles:watch']);
+gulp.task('compile', ['css', 'scsslint', 'plBuild']);
+gulp.task('watch', ['watch:css', 'watch:pl']);
+gulp.task('default', ['compile', 'watch:css']);
