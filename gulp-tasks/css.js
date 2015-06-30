@@ -8,6 +8,7 @@ var scsslint = require('gulp-scss-lint');
 module.exports = function (gulp, mod, config, tasks) {
   tasks.watch.push('watch:css');
   tasks.compile.push('css');
+  tasks.validate.push('scsslint');
   
   gulp.task('css', function () {
     return gulp.src(config.scssDir + '**/*.scss')

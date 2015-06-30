@@ -13,3 +13,4 @@ buildModernizrAtStart: true
 regressionTestRoot: pattern-lab/source/_patterns/
 css: true
 patternLab: true
+jshint: true

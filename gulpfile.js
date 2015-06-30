@@ -8,12 +8,15 @@ mod.fs = require('fs');
 var config = mod.yaml.safeLoad(mod.fs.readFileSync('Gruntconfig.yml', 'utf8'));
 var tasks = {
   "compile": [],
-  "watch": []
+  "watch": [],
+  "validate": []
 };
 
 if (config.css) {
   require('./gulp-tasks/css.js')(gulp, mod, config, tasks);
 }
+
+require('./gulp-tasks/js.js')(gulp, mod, config, tasks);
 
 if (config.patternLab) {
   require('./gulp-tasks/pattern-lab.js')(gulp, mod, config, tasks);
@@ -21,5 +24,6 @@ if (config.patternLab) {
 
 gulp.task('build', ['compile']);
 gulp.task('compile', tasks.compile);
+gulp.task('validate', tasks.validate);
 gulp.task('watch', tasks.watch);
 gulp.task('default', ['watch']);
