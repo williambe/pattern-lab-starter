@@ -1,55 +1,26 @@
 'use strict';
-var gulp = require('gulp'),
-  gutil = require('gulp-util'),
-  sass = require('gulp-sass'),
-  sourcemaps = require('gulp-sourcemaps'),
-  postcss = require('gulp-postcss'),
-  autoprefixer = require('autoprefixer-core'),
-  scsslint = require('gulp-scss-lint'),
-  yaml = require('js-yaml'),
-  fs = require('fs'),
-  exec = require('child_process').exec,
-  config = yaml.safeLoad(fs.readFileSync('Gruntconfig.yml', 'utf8'));
 
-gulp.task('css', function () {
-  return gulp.src(config.scssDir + '**/*.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass({
-      outputStyle: 'expanded'
-    }).on('error', sass.logError))
-    .pipe(postcss(
-      [
-        autoprefixer({
-          browsers: [
-            'last 2 versions'
-          ]
-        })
-      ]
-    ))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./css'));
-});
+var mod = {},
+  gulp = require('gulp');
+mod.gulp = gulp;
+mod.gutil = require('gulp-util');
+mod.sass = require('gulp-sass');
+mod.sourcemaps = require('gulp-sourcemaps');
+mod.postcss = require('gulp-postcss');
+mod.autoprefixer = require('autoprefixer-core');
+mod.scsslint = require('gulp-scss-lint');
+mod.yaml = require('js-yaml');
+mod.fs = require('fs');
+mod.exec = require('child_process').exec;
+var config = mod.yaml.safeLoad(mod.fs.readFileSync('Gruntconfig.yml', 'utf8'));
 
-gulp.task('watch:css', ['css'], function () {
-  return gulp.watch(config.scssDir + '**/*.scss', [
-    'css',
-    'scsslint'
-  ]);
-});
-
-gulp.task('scsslint', function () {
-  return gulp.src(config.scssDir + '**/*.scss')
-    .pipe(scsslint({
-      'config': '.scss-lint.yml',
-      'bundleExec': true
-    }));
-});
+require('./gulp-tasks/css.js')(gulp, mod, config);
 
 gulp.task('plBuild', function(cb) {
-  exec("php " + config.plDir + "core/builder.php --generate --nocache", function(err, stdout, stderr) {
+  mod.exec("php " + config.plDir + "core/builder.php --generate --nocache", function(err, stdout, stderr) {
     if (err) return cb(err);
-    if (stderr) gutil.log(stderr);
-    if (stdout) gutil.log(stdout);
+    if (stderr) mod.gutil.log(stderr);
+    if (stdout) mod.gutil.log(stdout);
     cb();
   });
 });
