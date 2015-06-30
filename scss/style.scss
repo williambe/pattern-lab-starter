@@ -16,10 +16,6 @@
 // Helpful mixins, http://bourbon.io/docs/
 @import "../node_modules/bourbon/app/assets/stylesheets/bourbon";
 
-.b {
-  @extend h1;
-}
-
 // End libs
 
 @import "all-partials";
