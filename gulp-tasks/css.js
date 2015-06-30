@@ -1,24 +1,30 @@
 'use strict';
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer-core');
+var scsslint = require('gulp-scss-lint');
+
 module.exports = function (gulp, mod, config, tasks) {
   tasks.watch.push('watch:css');
   tasks.compile.push('css');
   
   gulp.task('css', function () {
     return gulp.src(config.scssDir + '**/*.scss')
-      .pipe(mod.sourcemaps.init())
-      .pipe(mod.sass({
+      .pipe(sourcemaps.init())
+      .pipe(sass({
         outputStyle: 'expanded'
-      }).on('error', mod.sass.logError))
-      .pipe(mod.postcss(
+      }).on('error', sass.logError))
+      .pipe(postcss(
         [
-          mod.autoprefixer({
+          autoprefixer({
             "browsers": [
               'last 2 versions'
             ]
           })
         ]
       ))
-      .pipe(mod.sourcemaps.write())
+      .pipe(sourcemaps.write())
       .pipe(gulp.dest('./css'));
   });
 
@@ -32,7 +38,7 @@ module.exports = function (gulp, mod, config, tasks) {
 
   gulp.task('scsslint', function () {
     return gulp.src(config.scssDir + '**/*.scss')
-      .pipe(mod.scsslint({
+      .pipe(scsslint({
         'config': '.scss-lint.yml',
         'bundleExec': true
       }));
