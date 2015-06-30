@@ -1,8 +1,7 @@
 'use strict';
 
-var mod = {},
-  gulp = require('gulp');
-mod.gulp = gulp;
+var mod = {};
+var gulp = require('gulp');
 mod.gutil = require('gulp-util');
 mod.sass = require('gulp-sass');
 mod.sourcemaps = require('gulp-sourcemaps');
@@ -13,25 +12,20 @@ mod.yaml = require('js-yaml');
 mod.fs = require('fs');
 mod.exec = require('child_process').exec;
 var config = mod.yaml.safeLoad(mod.fs.readFileSync('Gruntconfig.yml', 'utf8'));
+var tasks = {
+  "compile": [],
+  "watch": []
+};
 
-require('./gulp-tasks/css.js')(gulp, mod, config);
+if (config.css) {
+  require('./gulp-tasks/css.js')(gulp, mod, config, tasks);
+}
 
-gulp.task('plBuild', function(cb) {
-  mod.exec("php " + config.plDir + "core/builder.php --generate --nocache", function(err, stdout, stderr) {
-    if (err) return cb(err);
-    if (stderr) mod.gutil.log(stderr);
-    if (stdout) mod.gutil.log(stdout);
-    cb();
-  });
-});
-
-gulp.task('watch:pl', ['plBuild'], function() {
-  return gulp.watch(config.plDir + 'source/**/*.{mustache,json}', [
-    'plBuild'
-  ]);
-});
+if (config.patternLab) {
+  require('./gulp-tasks/pattern-lab.js')(gulp, mod, config, tasks);
+}
 
 gulp.task('build', ['compile']);
-gulp.task('compile', ['css', 'scsslint', 'plBuild']);
-gulp.task('watch', ['watch:css', 'watch:pl']);
-gulp.task('default', ['compile', 'watch:css']);
+gulp.task('compile', tasks.compile);
+gulp.task('watch', tasks.watch);
+gulp.task('default', ['watch']);

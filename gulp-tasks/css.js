@@ -1,5 +1,8 @@
 'use strict';
-module.exports = function (gulp, mod, config) {
+module.exports = function (gulp, mod, config, tasks) {
+  tasks.watch.push('watch:css');
+  tasks.compile.push('css');
+  
   gulp.task('css', function () {
     return gulp.src(config.scssDir + '**/*.scss')
       .pipe(mod.sourcemaps.init())
