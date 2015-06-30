@@ -5,16 +5,17 @@ module.exports = function (gulp, mod, config, tasks) {
   tasks.compile.push('plBuild');
   tasks.watch.push('watch:pl');
 
-  function plBuild(cb) {
-    exec("php " + config.plDir + "core/builder.php --generate --nocache", function (err, stdout, stderr) {
-      if (err) return cb(err);
-      if (stderr) mod.gutil.log(stderr);
-      if (stdout) mod.gutil.log(stdout);
-      cb();
-    });
-  }
-
   gulp.task('plBuild', function (cb) {
+    
+    function plBuild(cb) {
+      exec("php " + config.plDir + "core/builder.php --generate --nocache", function (err, stdout, stderr) {
+        if (err) return cb(err);
+        if (stderr) mod.gutil.log(stderr);
+        if (stdout) mod.gutil.log(stdout);
+        cb();
+      });
+    }
+
     // Need to check if `public/` exists yet - i.e. is this first run?
     fs.exists(config.plDir + "public/styleguide/html/styleguide.html", function (exists) {
       if (exists) {
@@ -28,6 +29,7 @@ module.exports = function (gulp, mod, config, tasks) {
         });
       }
     });
+    
   });
 
   gulp.task('watch:pl', ['plBuild'], function () {
@@ -35,5 +37,5 @@ module.exports = function (gulp, mod, config, tasks) {
       'plBuild'
     ]);
   });
-  
+
 };
