@@ -12,8 +12,8 @@ var tasks = {
   "validate": []
 };
 
+require('gulp-config-sass')(gulp, config, tasks);
 if (config.css) {
-  require('./gulp-tasks/css.js')(gulp, mod, config, tasks);
 }
 
 require('./gulp-tasks/js.js')(gulp, mod, config, tasks);
