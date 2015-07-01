@@ -6,10 +6,9 @@ module.exports = function (gulp, mod, config, tasks) {
 
   var jsFiles = [
     config.jsDir + "**/*.js",
-    "Gruntfile.js",
-    "grunt-tasks/**/*.js",
-    "!" + config.jsDir + "**/node_modules/**/*",
-    "!" + config.jsDir + "**/bower_components/**/*"
+    "gulpfile.js",
+    "gulp-tasks/**/*.js",
+    "!" + config.jsDir + "es6/**"
   ];
   
   gulp.task('jshint', function () {
@@ -25,3 +24,4 @@ module.exports = function (gulp, mod, config, tasks) {
   });
 
 };
+
