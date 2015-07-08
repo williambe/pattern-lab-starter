@@ -71,6 +71,7 @@
     "grunt-wiredep": "^2.0.0",
     "gulp": "^3.9.0",
     "gulp-config-sass": "^1.1.0",
+    "gulp-config-pattern-lab": "^1.0.0",
     "gulp-jshint": "^1.11.1",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-util": "^3.0.6",

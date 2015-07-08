@@ -16,11 +16,11 @@ if (config.css) {
   require('gulp-config-sass')(gulp, config, tasks);
 }
 
-require('./gulp-tasks/js.js')(gulp, mod, config, tasks);
-
 if (config.patternLab) {
-  require('./gulp-tasks/pattern-lab.js')(gulp, mod, config, tasks);
+  require('gulp-config-pattern-lab')(gulp, config, tasks);
 }
+
+require('./gulp-tasks/js.js')(gulp, mod, config, tasks);
 
 gulp.task('build', ['compile']);
 gulp.task('compile', tasks.compile);
