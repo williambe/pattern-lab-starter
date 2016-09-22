@@ -36,8 +36,6 @@ Start up watches and local server after compiling:
 npm run start # or `npm start`
 ```
 
-> Protip: any config option from `gulpconfig.yml` can be overwritten with `npm start -- --js.enabled=''`, or by including options in your own `~/.p2-theme-corerc` file. See [`rc`](https://www.npmjs.com/package/rc) for more details.
-
 Run Tests:
 
 ```bash
@@ -158,6 +156,16 @@ Documentation for many of the features are found in `node_modules/p2-theme-core/
 
 - JS: edit `.eslintrc` - [rule docs](http://eslint.org/docs/rules/)
 - Scss: edit `.stylelintrc.js` - [docs](http://stylelint.io/user-guide/)
+
+> Protip: any config option from `gulpconfig.js` can be overwritten by pass in CLI flags, or by including options in your own `~/.p2-theme-corerc` file. See [`rc`](https://www.npmjs.com/package/rc) for more details. Some examples below
+
+Run starts, but with Pattern Lab disabled:
+
+    npm start -- --patternLab.enabled=''
+
+Change CSS compile location:
+
+    npm start -- --css.dest='new/spot/'
 
 #### Disabling Stylelint rules for a certain section
 
