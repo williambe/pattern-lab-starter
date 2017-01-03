@@ -1,12 +1,18 @@
 {
   "name": "williambe/pattern-lab-starter",
+  "type": "drupal-theme",
+  "version": "dev-master",
   "description": "Pattern Lab Starter",
   "author": {
     "name": "Evan Lovely",
     "url": "https://github.com/EvanLovely"
   },
+  "homepage": "https://github.com/phase2/pattern-lab-starter",
   "keywords": [
     "pattern-lab",
-    "prototyping"
-  ]
+    "prototyping",
+    "Drupal"
+  ],
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev"
 }
