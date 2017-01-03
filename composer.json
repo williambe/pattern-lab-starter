@@ -1,0 +1,12 @@
+{
+  "name": "williambe/pattern-lab-starter",
+  "description": "Pattern Lab Starter",
+  "author": {
+    "name": "Evan Lovely",
+    "url": "https://github.com/EvanLovely"
+  },
+  "keywords": [
+    "pattern-lab",
+    "prototyping"
+  ]
+}
