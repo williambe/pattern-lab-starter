@@ -1,0 +1,114 @@
+/* ==========================================================================
+Colors (start with neutral tint, modify this in branding/color)
+========================================================================== */
+$c-default-darker: darken($c-default, 60%);
+$c-default-dark: darken($c-default, 20%);
+
+$c-default: gray;
+
+$c-default-light: lighten($c-default, 20%);
+$c-default-lighter: lighten($c-default, 40%);
+
+
+$c-default-alt-darker: darken($c-default-alt, 60%);
+$c-default-alt-dark: darken($c-default-alt, 20%);
+
+$c-default-alt: teal;
+
+$c-default-alt-light: lighten($c-default-alt, 20%);
+$c-default-alt-lighter: lighten($c-default-alt, 40%);
+
+
+/* --------------------------------------------------------------------------
+Colors definition
+-------------------------------------------------------------------------- */
+$c-primary: 						$c-default !default;
+$c-primary-darker: 			$c-default-darker !default;
+$c-primary-dark: 				$c-default-dark !default;
+$c-primary-light: 			$c-default-light !default;
+$c-primary-lighter: 		$c-default-lighter !default;
+
+$c-secondary: 					$c-default-alt !default;
+$c-secondary-darker: 		$c-default-alt-darker !default;
+$c-secondary-dark: 			$c-default-alt-dark !default;
+$c-secondary-light: 		$c-default-alt-light !default;
+$c-secondary-lighter: 	$c-default-alt-lighter !default;
+
+$c-warning: 						yellow !default;
+$c-important: 					red !default;
+$c-information: 				blue !default;
+
+$c-white: 							darken(white, 5%) !default;
+$c-gray: 								$c-default !default;
+$c-black: 							lighten(black, 5%) !default;
+
+/* --------------------------------------------------------------------------
+Colors application
+-------------------------------------------------------------------------- */
+
+$c-base: 								$c-primary !default;
+$c-accent: 							$c-secondary !default;
+
+$c-background: 					$c-white !default;
+$c-background-light: 		$c-gray !default;
+$c-background-accent: 	$c-secondary !default;
+$c-background-invert: 	$c-primary !default;
+
+$c-text: 								$c-primary !default;
+$c-text-alt: 						$c-primary-lighter !default;
+$c-text-headings: 			$c-primary !default; 
+$c-text-headings-alt: 	$c-secondary !default; 
+$c-text-headings-cover: $c-white !default; 
+$c-text-link: 					$c-secondary !default;
+$c-text-link-visited: 	$c-secondary-dark !default;
+$c-text-link-hover: 		$c-secondary-dark !default;
+
+$c-border: 							$c-primary !default;
+$c-border-invert: 			$c-secondary !default;
+$c-border-accent: 			$c-white !default;
+
+
+/* ==========================================================================
+Root sizes
+========================================================================== */
+/* --------------------------------------------------------------------------
+Modular Scale
+-------------------------------------------------------------------------- */
+$ms-base: 							1em;
+$ms-ratio: 							$fourth;
+
+$ms-range:
+  1.1   								20em,
+  1.28									60em;
+
+
+/* --------------------------------------------------------------------------
+Scaling Variables
+-------------------------------------------------------------------------- */
+// $phi: 							1.618034;
+// $golden: 					$phi;
+
+// $double-octave: 		4;
+// $major-twelfth: 		3;
+// $major-eleventh: 	2.666666667;
+// $major-tenth: 			2.5;
+// $octave: 					2;
+// $major-seventh: 		1.875;
+// $minor-seventh: 		1.777777778;
+// $major-sixth: 			1.666666667;
+// $minor-sixth: 			1.6;
+// $fifth: 						1.5;
+// $augmented-fourth: 1.41421;
+// $fourth: 					1.333333333;
+// $major-third: 			1.25;
+// $minor-third: 			1.2;
+// $major-second: 		1.125;
+// $minor-second: 		1.066666667;
+
+/* --------------------------------------------------------------------------
+Line heights
+-------------------------------------------------------------------------- */
+
+$lh-base:							1.5;
+$lh-heading:					1.0;
+$lh-lead:							1.7; // as seen on uswds
