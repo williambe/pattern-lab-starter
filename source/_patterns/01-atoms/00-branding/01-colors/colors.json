@@ -1,0 +1,15 @@
+{
+  "items": [
+    {
+      "name": "$c-grey",
+      "value": "grey"
+    },
+    {
+      "name": "$c-white",
+      "value": "#f2f2f2"
+    }
+  ],
+  "meta": {
+    "description": "</code>"
+  }
+}

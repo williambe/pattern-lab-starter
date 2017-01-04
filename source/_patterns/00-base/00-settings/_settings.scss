@@ -1,5 +1,5 @@
 /* ==========================================================================
-Colors (start with neutral tint, modify this in branding/color)
+Colors (start with neutral tints)
 ========================================================================== */
 $c-default-darker: darken($c-default, 60%);
 $c-default-dark: darken($c-default, 20%);
@@ -20,7 +20,7 @@ $c-default-alt-lighter: lighten($c-default-alt, 40%);
 
 
 /* --------------------------------------------------------------------------
-Colors definition
+Colors definition (modify in branding/color))
 -------------------------------------------------------------------------- */
 $c-primary: 						$c-default !default;
 $c-primary-darker: 			$c-default-darker !default;

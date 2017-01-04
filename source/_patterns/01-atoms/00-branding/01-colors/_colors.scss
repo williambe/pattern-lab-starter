@@ -1,0 +1,50 @@
+/* ==========================================================================
+Branding/Colors
+========================================================================== */
+/* --------------------------------------------------------------------------
+Colors definition
+-------------------------------------------------------------------------- */
+$c-primary: 						$c-default;
+$c-primary-darker: 			$c-default-darker;
+$c-primary-dark: 				$c-default-dark;
+$c-primary-light: 			$c-default-light;
+$c-primary-lighter: 		$c-default-lighter;
+
+$c-secondary: 					$c-default-alt;
+$c-secondary-darker: 		$c-default-alt-darker;
+$c-secondary-dark: 			$c-default-alt-dark;
+$c-secondary-light: 		$c-default-alt-light;
+$c-secondary-lighter: 	$c-default-alt-lighter;
+
+$c-warning: 						yellow;
+$c-important: 					red;
+$c-information: 				blue;
+
+$c-white: 							darken(white, 5%);
+$c-gray: 								$c-default;
+$c-black: 							lighten(black, 5%);
+
+/* --------------------------------------------------------------------------
+Colors application
+-------------------------------------------------------------------------- */
+
+$c-base: 								$c-primary;
+$c-accent: 							$c-secondary;
+
+$c-background: 					$c-white;
+$c-background-light: 		$c-gray;
+$c-background-accent: 	$c-secondary;
+$c-background-invert: 	$c-primary;
+
+$c-text: 								$c-primary;
+$c-text-alt: 						$c-primary-lighter;
+$c-text-headings: 			$c-primary; 
+$c-text-headings-alt: 	$c-secondary; 
+$c-text-headings-cover: $c-white; 
+$c-text-link: 					$c-secondary;
+$c-text-link-visited: 	$c-secondary-dark;
+$c-text-link-hover: 		$c-secondary-dark;
+
+$c-border: 							$c-primary;
+$c-border-invert: 			$c-secondary;
+$c-border-accent: 			$c-white;
