@@ -110,7 +110,7 @@ module.exports = {
     },
     scssToJson: [
       {
-        src: 'source/_patterns/01-atoms/00-brandings/01-colors/_colors.scss',
+        src: 'source/_patterns/01-atoms/00-branding/01-colors/_colors.scss',
         dest: 'source/_patterns/01-atoms/00-brandings/01-colors/colors.json',
         lineStartsWith: '$c-',
         allowVarValues: true,
