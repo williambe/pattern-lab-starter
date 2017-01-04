@@ -139,12 +139,12 @@ module.exports = {
         lineStartsWith: '$spacing--',
         allowVarValues: false,
       },
-      {
-        src: 'source/_patterns/00-base/animations/01-transitions/_transitions.scss',
-        dest: 'source/_patterns/00-base/animations/01-transitions/transitions.json',
-        lineStartsWith: '$trans-',
-        allowVarValues: true,
-      },
+      // {
+      //   src: 'source/_patterns/00-base/animations/01-transitions/_transitions.scss',
+      //   dest: 'source/_patterns/00-base/animations/01-transitions/transitions.json',
+      //   lineStartsWith: '$trans-',
+      //   allowVarValues: true,
+      // },
     ],
   },
   // https://github.com/nfroidure/gulp-iconfont
