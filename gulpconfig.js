@@ -127,12 +127,12 @@ module.exports = {
         lineStartsWith: '$ff--',
         allowVarValues: false,
       },
-      {
-        src: 'source/_patterns/00-base/breakpoints/_breakpoints.scss',
-        dest: 'source/_patterns/00-base/breakpoints/breakpoints.json',
-        lineStartsWith: '$bp--',
-        allowVarValues: false,
-      },
+      // {
+      //   src: 'source/_patterns/00-base/breakpoints/_breakpoints.scss',
+      //   dest: 'source/_patterns/00-base/breakpoints/breakpoints.json',
+      //   lineStartsWith: '$bp--',
+      //   allowVarValues: false,
+      // },
       {
         src: 'source/_patterns/00-base/spacing/_spacing.scss',
         dest: 'source/_patterns/00-base/spacing/spacing.json',
