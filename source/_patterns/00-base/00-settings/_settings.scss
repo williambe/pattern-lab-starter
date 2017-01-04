@@ -1,19 +1,19 @@
 /* ==========================================================================
 Colors (start with neutral tints)
 ========================================================================== */
+$c-default: gray;
+
 $c-default-darker: darken($c-default, 60%);
 $c-default-dark: darken($c-default, 20%);
-
-$c-default: gray;
 
 $c-default-light: lighten($c-default, 20%);
 $c-default-lighter: lighten($c-default, 40%);
 
 
+$c-default-alt: teal;
+
 $c-default-alt-darker: darken($c-default-alt, 60%);
 $c-default-alt-dark: darken($c-default-alt, 20%);
-
-$c-default-alt: teal;
 
 $c-default-alt-light: lighten($c-default-alt, 20%);
 $c-default-alt-lighter: lighten($c-default-alt, 40%);
