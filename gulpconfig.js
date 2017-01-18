@@ -109,24 +109,24 @@ module.exports = {
       ],
     },
     scssToJson: [
-      {
-        src: 'source/_patterns/01-atoms/00-branding/01-colors/_colors.scss',
-        dest: 'source/_patterns/01-atoms/00-branding/01-colors/colors.json',
-        lineStartsWith: '$c-',
-        allowVarValues: true,
-      },
-      {
-        src: 'source/_patterns/01-atoms/01-typography/fonts/_fonts.scss',
-        dest: 'source/_patterns/01-atoms/01-typography/fonts/font-sizes.json',
-        lineStartsWith: '$fs--',
-        allowVarValues: false,
-      },
-      {
-        src: 'source/_patterns/01-atoms/01-typography/fonts/_fonts.scss',
-        dest: 'source/_patterns/01-atoms/01-typography/fonts/font-families.json',
-        lineStartsWith: '$ff--',
-        allowVarValues: false,
-      },
+      // {
+      //   src: 'source/_patterns/01-atoms/00-branding/01-colors/_colors.scss',
+      //   dest: 'source/_patterns/01-atoms/00-branding/01-colors/colors.json',
+      //   lineStartsWith: '$c-',
+      //   allowVarValues: true,
+      // },
+      // {
+      //   src: 'source/_patterns/01-atoms/01-typography/fonts/_fonts.scss',
+      //   dest: 'source/_patterns/01-atoms/01-typography/fonts/font-sizes.json',
+      //   lineStartsWith: '$fs--',
+      //   allowVarValues: false,
+      // },
+      // {
+      //   src: 'source/_patterns/01-atoms/01-typography/fonts/_fonts.scss',
+      //   dest: 'source/_patterns/01-atoms/01-typography/fonts/font-families.json',
+      //   lineStartsWith: '$ff--',
+      //   allowVarValues: false,
+      // },
       // {
       //   src: 'source/_patterns/00-base/breakpoints/_breakpoints.scss',
       //   dest: 'source/_patterns/00-base/breakpoints/breakpoints.json',

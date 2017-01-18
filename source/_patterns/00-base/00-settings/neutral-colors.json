@@ -1,0 +1,57 @@
+{
+  "items": [
+    {
+      "name": "$c-default-lighter",
+      "value": "#e6e6e6",
+      "comment": "lighten($c-default, 40%)"
+    },
+    {
+      "name": "$c-default-light",
+      "value": "#b3b3b3",
+      "comment": "lighten($c-default, 20%)"
+    },
+    {
+      "name": "$c-default",
+      "value": "grey",
+      "comment": "Default Color. Used for wireframing and prototyping"
+    },
+    {
+      "name": "$c-default-dark",
+      "value": "#4d4d4d",
+      "comment": "darken($c-default, 20%);"
+    },
+    {
+      "name": "$c-default-darker",
+      "value": "#000000",
+      "comment": "darken($c-default, 50%);"
+    },
+   {
+      "name": "$c-default-alt-lighter",
+      "value": "#4dffff",
+      "comment": "lighten($c-default-alt, 40%)"
+    },
+    {
+      "name": "$c-default-alt-light",
+      "value": "#00e6e6",
+      "comment": "lighten($c-default-alt, 20%)"
+    },
+    {
+      "name": "$c-default-alt",
+      "value": "teal",
+      "comment": "Default alt Color. Used for wireframing and prototyping"
+    },
+    {
+      "name": "$c-default-alt-dark",
+      "value": "#006666",
+      "comment": "darken($c-default-alt, 5%);"
+    },
+    {
+      "name": "$c-default-alt-darker",
+      "value": "#003333",
+      "comment": "darken($c-default-alt, 15%);"
+    }
+  ],
+  "meta": {
+    "description": "To add to these items, use Sass variables that start with <code>$c-</code> in <code>source/_patterns/00-base/01-colors/_color-vars.scss</code>"
+  }
+}

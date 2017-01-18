@@ -1,15 +1,172 @@
 {
   "items": [
     {
-      "name": "$c-grey",
-      "value": "grey"
+      "name": "$c-primary",
+      "value": "$c-default",
+      "comment": ""
+    },
+    {
+      "name": "$c-primary-darker",
+      "value": "$c-default-darker",
+      "comment": ""
+    },
+    {
+      "name": "$c-primary-dark",
+      "value": "$c-default-dark",
+      "comment": ""
+    },
+    {
+      "name": "$c-primary-light",
+      "value": "$c-default-light",
+      "comment": ""
+    },
+    {
+      "name": "$c-primary-lighter",
+      "value": "$c-default-lighter",
+      "comment": ""
+    },
+    {
+      "name": "$c-secondary",
+      "value": "$c-default-alt",
+      "comment": ""
+    },
+    {
+      "name": "$c-secondary-darker",
+      "value": "$c-default-alt-darker",
+      "comment": ""
+    },
+    {
+      "name": "$c-secondary-dark",
+      "value": "$c-default-alt-dark",
+      "comment": ""
+    },
+    {
+      "name": "$c-secondary-light",
+      "value": "$c-default-alt-light",
+      "comment": ""
+    },
+    {
+      "name": "$c-secondary-lighter",
+      "value": "$c-default-alt-lighter",
+      "comment": ""
+    },
+    {
+      "name": "$c-warning",
+      "value": "yellow",
+      "comment": ""
+    },
+    {
+      "name": "$c-important",
+      "value": "red",
+      "comment": ""
+    },
+    {
+      "name": "$c-information",
+      "value": "blue",
+      "comment": ""
     },
     {
       "name": "$c-white",
-      "value": "#f2f2f2"
+      "value": "darken(white, 5%)",
+      "comment": ""
+    },
+    {
+      "name": "$c-gray",
+      "value": "$c-default",
+      "comment": ""
+    },
+    {
+      "name": "$c-black",
+      "value": "lighten(black, 5%)",
+      "comment": ""
+    },
+    {
+      "name": "$c-base",
+      "value": "$c-primary",
+      "comment": ""
+    },
+    {
+      "name": "$c-accent",
+      "value": "$c-secondary",
+      "comment": ""
+    },
+    {
+      "name": "$c-background",
+      "value": "$c-white",
+      "comment": ""
+    },
+    {
+      "name": "$c-background-light",
+      "value": "$c-gray",
+      "comment": ""
+    },
+    {
+      "name": "$c-background-accent",
+      "value": "$c-secondary",
+      "comment": ""
+    },
+    {
+      "name": "$c-background-invert",
+      "value": "$c-primary",
+      "comment": ""
+    },
+    {
+      "name": "$c-text",
+      "value": "$c-primary",
+      "comment": ""
+    },
+    {
+      "name": "$c-text-alt",
+      "value": "$c-primary-lighter",
+      "comment": ""
+    },
+    {
+      "name": "$c-text-headings",
+      "value": "$c-primary",
+      "comment": ""
+    },
+    {
+      "name": "$c-text-headings-alt",
+      "value": "$c-secondary",
+      "comment": ""
+    },
+    {
+      "name": "$c-text-headings-cover",
+      "value": "$c-white",
+      "comment": ""
+    },
+    {
+      "name": "$c-text-link",
+      "value": "$c-secondary",
+      "comment": ""
+    },
+    {
+      "name": "$c-text-link-visited",
+      "value": "$c-secondary-dark",
+      "comment": ""
+    },
+    {
+      "name": "$c-text-link-hover",
+      "value": "$c-secondary-dark",
+      "comment": ""
+    },
+    {
+      "name": "$c-border",
+      "value": "$c-primary",
+      "comment": ""
+    },
+    {
+      "name": "$c-border-invert",
+      "value": "$c-secondary",
+      "comment": ""
+    },
+    {
+      "name": "$c-border-accent",
+      "value": "$c-white",
+      "comment": ""
     }
   ],
   "meta": {
-    "description": "</code>"
+    "description": "To add to these items, use Sass variables that start with <code>$c-</code> in <code>source/_patterns/01-atoms/00-branding/01-colors/_colors.scss</code>"
   }
 }

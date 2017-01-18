@@ -50,15 +50,16 @@ plugins:
       base:
         paths:
           - ../source/_patterns/00-base
-          - ../source/_patterns/00-base/01-colors
-          - ../source/_patterns/00-base/animations/01-transitions
-          - ../source/_patterns/00-base/breakpoints
+          - ../source/_patterns/00-base/00-settings
+          - ../source/_patterns/00-base/animations-move/01-transitions
+          - ../source/_patterns/00-base/breakpoints-refactor
           - ../source/_patterns/00-base/grids
           - ../source/_patterns/00-base/spacing
           - ../source/_patterns/00-base/utilities/borders
       atoms:
         paths:
           - ../source/_patterns/01-atoms
+          - ../source/_patterns/01-atoms/00-branding/01-colors
           - ../source/_patterns/01-atoms/01-typography/fonts
           - ../source/_patterns/01-atoms/01-typography/headings
           - ../source/_patterns/01-atoms/01-typography/lists

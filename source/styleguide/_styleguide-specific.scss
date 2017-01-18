@@ -19,20 +19,20 @@ pre {
   padding: 0;
   > li {
     overflow: hidden;
-    border: 1px solid #ccc;
+    border: 1px solid $c-default-light;
     padding: 0.3em;
     margin: 0 0 10px;
     box-sizing: border-box;
-    font-size: 12px;
+    font-size: 14px;
     .sg-swatch {
       display: block;
-      height: 25px;
-      //float: left;
-      //width: 100%;
-      border: dotted 1px hsl(0, 0%, 50%);
+      height: 5em;
+
     }
     .sg-info {
-      line-height: 1;
+      line-height: 1.2;
+      height: 5em;
+      margin-top: 0.5em;
       //float: right;
       //width: 66%;
     }
@@ -41,12 +41,12 @@ pre {
       width: 49%;
       margin-right: 1%;
       .sg-swatch {
-        //height: 100px;
+        height: 5em;
       }
     }
     @media all and (min-width: 700px) {
-      width: 24%;
-      &:nth-child(4n+1) {
+      width: 19%;
+      &:nth-child(5n+1) {
         clear: both;
       }
     }
@@ -105,7 +105,61 @@ pre {
     }
   }
 }
+/*------------------------------------*\
+    $PATTERN LAB CONTENT
+\*------------------------------------*/
+/* Section Pattern */
 
+.sg-pattern, .sg-subtype {
+  margin: 0 auto 2em;
+  max-width: 90em;
+  padding: 0 1em;
+  position: relative; 
+}
+
+.sg-subtype {
+  border-bottom: 1px solid $c-default;
+  padding: 10px 10px;
+  background-color: $c-default-alt;
+  margin-bottom: 30px;
+  height: 100px;
+  position: relative;
+  & a {
+    display: block;
+    font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+    font-size: 90%;
+    color: $c-white;
+    text-decoration: none;
+  }
+}
+
+/* Section Head */
+.sg-pattern-head {
+  margin: 2em 0;
+  font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-size: 70%;
+  font-weight: normal;
+  padding: 1em 0;
+  border-bottom: 1px solid gray;
+  & a {
+    display: block;
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+    background-image: none;
+    text-shadow: none; 
+  }
+  & a:hover {
+    color: #222222; 
+  }
+  & h3 {
+    font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;    
+  }
+ }
+
+.sg-pattern-example {
+  font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+}
 .sg-font-sizes {
   thead {
     font-weight: bold;
@@ -127,7 +181,17 @@ pre {
   height: 200px;
   background-color: rgba($c-gray, 0.5);
 }
-
+.sg-demofont {
+  &.helvetica {
+    font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;    
+  }
+}
+.sg-demofont-huge {
+  font-size: 500%;
+}
+.sg-demofont-tiny {
+  font-size: 100%;
+}
 // Icons
 .icons-container {
   max-width: 1140px;

@@ -3,7 +3,7 @@ Colors (start with neutral tints)
 ========================================================================== */
 $c-default: gray;
 
-$c-default-darker: darken($c-default, 60%);
+$c-default-darker: darken($c-default, 50%);
 $c-default-dark: darken($c-default, 20%);
 
 $c-default-light: lighten($c-default, 20%);
