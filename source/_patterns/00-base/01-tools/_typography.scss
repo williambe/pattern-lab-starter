@@ -1,3 +1,10 @@
+/* ==========================================================================
+Tools – Typography
+========================================================================== */
+/* ==========================================================================
+Fluid Type
+from phase2/pattern-lab-starter
+========================================================================== */
 /// Mixin - Fluid Type
 /// PRECISE CONTROL OVER RESPONSIVE TYPOGRAPHY FOR SASS
 /// Indrek Paas @indrekpaas
@@ -26,49 +33,10 @@
   }
 }
 
-/// Strip unit
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
-}
-
-/// Center.
-/// Center an element vertically or horizontally in its container,
-/// and optionally horizontally. Option to undo.
-/// @param $horizonally-center - center horizontally
-/// @param $vertically-center - center vertically
-/// @param $absolute-positioning - position absolutely, rather than relatively
-/// @param $undo - undo vertical centering on an element it was previously applied to
-@mixin center($horizontally: true, $vertically: true, $absolute: false, $undo: false) {
-  display: inline-block;
-  @if ($absolute) {
-    position: absolute;
-  } @else {
-    position: relative;
-  }
-  @if ($horizontally == true and $vertically == true) {
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-  }
-
-  @if ($vertically == true and $horizontally == false) {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  @if ($horizontally == true and $vertically == false) {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  @if ($undo) {
-    position: static;
-    left: auto;
-    transform: none;
-  }
-}
-
-/// Mixin - Local Base
+/* ==========================================================================
+local-base
+from phase2/pattern-lab-starter
+========================================================================== */
 /// Set HTML font sizing base for global/local sizing (rem/em).
 /// @link https://css-tricks.com/rem-global-em-local/
 @mixin local-base() {
@@ -79,7 +47,11 @@
   @include local-base();
 }
 
-/// Word Wrap fix for long spaceless strings
+/* ==========================================================================
+Word Wrap
+fix for long spaceless strings
+from phase2/pattern-lab-starter
+========================================================================== */
 /// @link https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
 @mixin word-wrap() {
   overflow-wrap: break-word;
@@ -88,7 +60,11 @@
   hyphens: auto;
 }
 
-/// Ellipsis fix for long spaceless strings
+/* ==========================================================================
+Ellipsis
+fix for long spaceless strings
+from phase2/pattern-lab-starter
+========================================================================== */
 /// @link https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
 @mixin ellipsis() {
   overflow: hidden;

@@ -52,7 +52,6 @@ plugins:
           - ../source/_patterns/00-base
           - ../source/_patterns/00-base/00-settings
           - ../source/_patterns/00-base/animations-move/01-transitions
-          - ../source/_patterns/00-base/breakpoints-refactor
           - ../source/_patterns/00-base/grids
           - ../source/_patterns/00-base/spacing
           - ../source/_patterns/00-base/utilities/borders

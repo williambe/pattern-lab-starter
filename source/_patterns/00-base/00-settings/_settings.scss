@@ -1,4 +1,16 @@
 /* ==========================================================================
+Settings
+TOC
+- colors
+- root sizes
+- layout
+- breakpoint
+- typography 
+========================================================================== */
+
+
+
+/* ==========================================================================
 Colors (start with neutral tints)
 ========================================================================== */
 $c-default: gray;
@@ -71,15 +83,18 @@ $c-border-accent: 			$c-white !default;
 /* ==========================================================================
 Root sizes
 ========================================================================== */
+$rs-max-width: 					1200px !default;
+$rs-base-font-size: 		16px !default;
+$rs-max-measure: 				675px !default;
 /* --------------------------------------------------------------------------
 Modular Scale
 -------------------------------------------------------------------------- */
-// $ms-base: 							1em;
-// $ms-ratio: 							$fourth;
+// $ms-base: 						1em;
+// $ms-ratio: 					$fourth;
 
 // $ms-range:
-//   1.1   								20em,
-//   1.28									60em;
+//   1.1   							20em,
+//   1.28								60em;
 
 
 /* --------------------------------------------------------------------------
@@ -112,3 +127,39 @@ Line heights
 $lh-base:							1.5;
 $lh-heading:					1.0;
 $lh-lead:							1.7; // as seen on uswds
+
+/* ==========================================================================
+breakpoint
+[Breakpoint](http://breakpoint-sass.com)
+========================================================================== */
+$bp--xsmall: 380px;
+$bp--small: 500px;
+$bp--medium: 640px;
+$bp--large: 768px;
+$bp--xlarge: 1024px;
+$bp--xxlarge: 1250px;
+$bp--xxxlarge: 1600px;
+
+/* ==========================================================================
+typography
+========================================================================== */
+/* --------------------------------------------------------------------------
+fonts
+-------------------------------------------------------------------------- */
+$ff-base: 						sans-serif !default; /* Used for all texts except headings */
+$ff-heading: 					sans-serif !default; /* Used for headings */
+$fu-ui: 							sans-serif !default;
+$ff-mono: 						monospace !default;
+
+/* --------------------------------------------------------------------------
+Font sizes
+-------------------------------------------------------------------------- */
+$fs-xsmall:				ms(-2) !default; /* xsmall  */
+$fs-small:				ms(-1) !default; /* p.small */
+$fs-base:					ms(0) !default; /* p, h6 */
+$fs-medium:				ms(1) !default; /* p.lead, h5 */
+$fs-large:				ms(2) !default; /* h4	 */
+$fs-xlarge:				ms(3) !default; /* h3 */
+$fs-xxlarge:			ms(4) !default; /* h2 */
+$fs-xxxlarge:			ms(5) !default; /* h1 */
+$fs-biggest:			ms(6) !default; /* page title */

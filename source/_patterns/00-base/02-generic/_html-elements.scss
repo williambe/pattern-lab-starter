@@ -1,0 +1,13 @@
+/* ==========================================================================
+Generic – HTML elements
+at this layer declaration are seldom modified, usually the same across any projects
+DON'TS
+- repeat/override declarations already in normalize.css
+- declare only very high-level with unremarkable styles
+
+TOC
+- img
+========================================================================== */
+img {
+  max-width: 100% !important;
+}
