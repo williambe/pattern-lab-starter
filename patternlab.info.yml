@@ -18,7 +18,6 @@ component-libraries:
       - source/_patterns/00-base/animations-move/01-transitions
       - source/_patterns/00-base/grids
       - source/_patterns/00-base/spacing
-      - source/_patterns/00-base/utilities/borders
   atoms:
     paths:
       - source/_patterns/01-atoms
