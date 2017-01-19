@@ -195,6 +195,7 @@ Sass libraries are installed using bower as well; you can see how we import them
 - [Singularity Grid System](https://github.com/at-import/Singularity) - Grid system
 - [Breakpoint](http://breakpoint-sass.com) - A cleaner way to do breakpoints/media queries
 - [Bourbon](http://bourbon.io/docs) - Helpful mixins
+- [Modular Scale](https://github.com/modularscale/modularscale-sass) - Modular scale calculator built into your Sass
 
 ## Gulp
 

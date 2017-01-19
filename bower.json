@@ -25,7 +25,8 @@
     "bourbon": "^4.2.7",
     "normalize-scss": "normalize.scss#^5.0.3",
     "singularity": "singularitygs#^1.7.0",
-    "breakpoint-sass": "^2.7.0"
+    "breakpoint-sass": "^2.7.0",
+    "modular-scale": "^2.1.3"
   },
   "devDependencies Note": "All dev dependencies below are here to 'fake' Drupal js behavior in PL",
   "devDependencies": {
