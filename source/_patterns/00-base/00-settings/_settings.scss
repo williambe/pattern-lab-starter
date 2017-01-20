@@ -6,6 +6,7 @@ TOC
 - layout
 - breakpoint
 - typography 
+- spacing
 ========================================================================== */
 
 
@@ -86,20 +87,25 @@ Root sizes
 $rs-max-width: 					1200px !default;
 $rs-base-font-size: 		16px !default;
 $rs-max-measure: 				675px !default;
-/* --------------------------------------------------------------------------
+
+/* ==========================================================================
+breakpoint
+[Breakpoint](http://breakpoint-sass.com)
+========================================================================== */
+$bp--xsmall: 						23.75em; // 380px
+$bp--small: 						30em; // 480px
+$bp--medium: 						40em; // 640px
+$bp--large: 						48em; // 768px
+$bp--xlarge: 						64em; // 1024px
+$bp--xxlarge: 					78em; // 1248px
+$bp--xxxlarge: 					100em; // 1600px
+
+/* ==========================================================================
 Modular Scale
--------------------------------------------------------------------------- */
-// $ms-base: 						1em;
-// $ms-ratio: 					$fourth;
-
-// $ms-range:
-//   1.1   							20em,
-//   1.28								60em;
-
-
-/* --------------------------------------------------------------------------
-Scaling Variables
--------------------------------------------------------------------------- */
+========================================================================== */
+/* ----------------------------------------------------------------------- */
+// Scaling Variables
+/* ----------------------------------------------------------------------- */
 // $phi: 							1.618034;
 // $golden: 					$phi;
 
@@ -119,32 +125,26 @@ Scaling Variables
 // $minor-third: 			1.2;
 // $major-second: 		1.125;
 // $minor-second: 		1.066666667;
-
+// $ms-base: 					1em !default;
+// $ms-ratio: 						$fourth;
 /* --------------------------------------------------------------------------
-Line heights
+Responsive scales
+@see https://github.com/modularscale/modularscale-sass#responsive-scales
 -------------------------------------------------------------------------- */
+$ms-range:
+  $major-second   		$bp--xsmall,
+  $fifth							$bp--xxlarge;
 
-$lh-base:							1.5;
-$lh-heading:					1.0;
-$lh-lead:							1.7; // as seen on uswds
 
-/* ==========================================================================
-breakpoint
-[Breakpoint](http://breakpoint-sass.com)
-========================================================================== */
-$bp--xsmall: 380px;
-$bp--small: 500px;
-$bp--medium: 640px;
-$bp--large: 768px;
-$bp--xlarge: 1024px;
-$bp--xxlarge: 1250px;
-$bp--xxxlarge: 1600px;
 
 /* ==========================================================================
 typography
 ========================================================================== */
 /* --------------------------------------------------------------------------
-fonts
+Font families
+-------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+fonts in use
 -------------------------------------------------------------------------- */
 $ff-base: 						sans-serif !default; /* Used for all texts except headings */
 $ff-heading: 					sans-serif !default; /* Used for headings */
@@ -154,12 +154,42 @@ $ff-mono: 						monospace !default;
 /* --------------------------------------------------------------------------
 Font sizes
 -------------------------------------------------------------------------- */
-$fs-xsmall:				ms(-2) !default; /* xsmall  */
-$fs-small:				ms(-1) !default; /* p.small */
-$fs-base:					ms(0) !default; /* p, h6 */
-$fs-medium:				ms(1) !default; /* p.lead, h5 */
-$fs-large:				ms(2) !default; /* h4	 */
-$fs-xlarge:				ms(3) !default; /* h3 */
-$fs-xxlarge:			ms(4) !default; /* h2 */
-$fs-xxxlarge:			ms(5) !default; /* h1 */
-$fs-biggest:			ms(6) !default; /* page title */
+$fs-xsmall:						ms(-2) !default; /* xsmall  */
+$fs-small:						ms(-1) !default; /* p.small */
+$fs-base:							ms(0) !default; /* p, h6 */
+$fs-medium:						ms(1) !default; /* p.lead, h5 */
+$fs-large:						ms(2) !default; /* h4	 */
+$fs-xlarge:						ms(3) !default; /* h3 */
+$fs-xxlarge:					ms(4) !default; /* h2 */
+$fs-xxxlarge:					ms(5) !default; /* h1 */
+$fs-biggest:					ms(6) !default; /* page title */
+
+/* --------------------------------------------------------------------------
+Line heights
+-------------------------------------------------------------------------- */
+$lh-base:							1.5;
+$lh-heading:					1.0;
+$lh-lead:							1.7; // as seen on uswds
+
+/* --------------------------------------------------------------------------
+Font weights
+-------------------------------------------------------------------------- */
+$fw-thin:							100; /* thin/hairline */
+$fw-extra-light: 			200; /* extra-light/ultra-light */
+$fw-light: 						300; /* light */
+$fw-regular:					400; /* regular */
+$fw-medium: 					500; /* medium */
+$fw-semi-bold:				600; /* semi-bold/demi-bold */
+$fw-bold: 						700; /* bold* */
+$fw-extra-bold: 			800; /* extra-bold/ultra-bold */
+$fw-black: 						900; /* black/heavy */
+
+/* ==========================================================================
+spacing
+========================================================================== */
+$sp-base: 						1.5em;
+$sp-half:							$sp-base/2;
+$sp-third:						$sp-base/3;
+$sp-double:						$sp-base*2;
+$sp-triple:						$sp-base*3;
+

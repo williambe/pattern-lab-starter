@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "name": "$ff-base",
+      "value": "'Karla', sans-serif",
+      "comment": "/* Used for all texts except headings */"
+    },
+    {
+      "name": "$ff-heading",
+      "value": "'Montserrat', sans-serif",
+      "comment": "/* Used for headings */"
+    }
+  ],
+  "meta": {
+    "description": "To add to these items, use Sass variables that start with <code>$ff-</code> in <code>source/_patterns/01-atoms/01-branding/02-fonts/_fonts.scss</code>"
+  }
+}

@@ -1,0 +1,38 @@
+/* ==========================================================================
+Fonts (overrides defaults)
+========================================================================== */
+/* --------------------------------------------------------------------------
+Font sizes
+-------------------------------------------------------------------------- */
+// $fs-xsmall:				ms(-2) !default; /* xsmall  */
+// $fs-small:				ms(-1) !default; /* p.small */
+// $fs-base:					ms(0) !default; /* p, h6 */
+// $fs-medium:				ms(1) !default; /* p.lead, h5 */
+// $fs-large:				ms(2) !default; /* h4	 */
+// $fs-xlarge:				ms(3) !default; /* h3 */
+// $fs-xxlarge:			ms(4) !default; /* h2 */
+// $fs-xxxlarge:			ms(5) !default; /* h1 */
+// $fs-biggest:			ms(6) !default; /* page title */
+
+/* --------------------------------------------------------------------------
+Font weights
+-------------------------------------------------------------------------- */
+// $fw-thin:							100; /* thin/hairline */
+// $fw-extra-light: 			200; /* extra-light/ultra-light */
+// $fw-light: 						300; /* light */
+// $fw-regular:					400; /* regular */
+// $fw-medium: 					500; /* medium */
+// $fw-semi-bold:				600; /* semi-bold/demi-bold */
+// $fw-bold: 						700; /* bold* */
+// $fw-extra-bold: 			800; /* extra-bold/ultra-bold */
+// $fw-black: 						900; /* black/heavy */
+
+/* --------------------------------------------------------------------------
+Font families
+-------------------------------------------------------------------------- */
+// @import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Montserrat:700&subset=latin-ext');
+
+// $ff-base: 'Karla', sans-serif; /* Used for all texts except headings */
+// $ff-heading: 'Montserrat', sans-serif; /* Used for headings */
+// $fu-ui: 'Karla', sans-serif;
+

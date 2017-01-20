@@ -43,9 +43,9 @@ from phase2/pattern-lab-starter
   font-size: 1rem; // 16px (default)
 }
 
-.local-base {
-  @include local-base();
-}
+// .local-base {
+//   @include local-base();
+// }
 
 /* ==========================================================================
 Word Wrap

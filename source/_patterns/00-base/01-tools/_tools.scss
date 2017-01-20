@@ -11,6 +11,8 @@ TOC
 - sizing
 - spacing
 - typography (partial file)
+- link
+- buttons
 - image-replace
 - svg-background
 ========================================================================== */
@@ -61,6 +63,47 @@ units (conversion)
 /* ==========================================================================
 typography (partial file)
 ========================================================================== */
+/* ==========================================================================
+link Set Link Colors & Decoration
+from phase2/pattern-lab-starter 
+========================================================================== */
+// Mixin - Set Link Colors & Decoration
+// @param $link
+// @param $hover
+// @param $deco
+// @param $deco--hover
+@mixin a-link($link: $c-text-link, $hover: $c-text-link-hover, $deco: none, $deco--hover: underline) {
+  &:link,
+  &:visited {
+    color: $link;
+    text-decoration: $deco;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $hover;
+    text-decoration: $deco--hover;
+  }
+}
+/* ==========================================================================
+buttons
+from phase2/pattern-lab-starter 
+========================================================================== */
+@mixin button($alt: false) {
+  @include a-link($link: $c-white, $hover: $c-white, $deco--hover: "none");
+  background-color: $c-background-accent;
+  border-radius: none;
+  font-family: $ff-base;
+  font-weight: $fw-bold;
+  padding: ($sp-third * 3) ($sp-base * 3);
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  @if $alt {
+    background: $c-background-light;
+    color: $c-accent;
+  }
+}
 
 /* ==========================================================================
 image-replace

@@ -17,15 +17,14 @@ component-libraries:
       - source/_patterns/00-base/00-settings
       - source/_patterns/00-base/animations-move/01-transitions
       - source/_patterns/00-base/grids
-      - source/_patterns/00-base/spacing
   atoms:
     paths:
       - source/_patterns/01-atoms
       - source/_patterns/01-atoms/00-branding/01-colors
-      - source/_patterns/01-atoms/01-typography/fonts
-      - source/_patterns/01-atoms/01-typography/headings
-      - source/_patterns/01-atoms/01-typography/lists
-      - source/_patterns/01-atoms/01-typography/text
+      - source/_patterns/01-atoms/00-branding/02-fonts
+      - source/_patterns/01-atoms/02-typography/00-headings
+      - source/_patterns/01-atoms/02-typography/01-text
+      - source/_patterns/01-atoms/02-typography/lists
       - source/_patterns/01-atoms/buttons
       - source/_patterns/01-atoms/images
   molecules:

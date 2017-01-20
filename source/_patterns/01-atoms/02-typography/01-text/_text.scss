@@ -1,0 +1,48 @@
+p {
+    @include ms-respond(font-size, 1);
+    line-height: $lh-base;
+  &.lead{
+    @include ms-respond(font-size, 2);
+    line-height: $lh-lead;
+  }
+}
+
+a {
+  @include a-link;
+}
+
+blockquote {
+  font-style: italic;
+  border-left: solid 3px $c-border;
+  margin-left: $sp-half;
+  padding-left: $sp-half;
+}
+
+.blockquote--featured {
+  color: $c-text-headings-alt;
+  border-left: none;
+  margin-left: 0;
+  padding-left: 0;
+  font-style: italic;
+  color: $c-text-headings-alt;
+  @include ms-respond(font-size, 2);
+}
+
+
+hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: currentColor;
+}
+
+
+.text__label {
+  text-transform: uppercase;
+
+  &::before {
+    content: "/ ";
+    color: $c-primary-lighter;
+  }
+
+
+}

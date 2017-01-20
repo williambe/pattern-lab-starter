@@ -7,7 +7,66 @@ DON'TS
 
 TOC
 - img
+- p
 ========================================================================== */
+dd {
+  margin-bottom: $sp-base;
+  margin-left: 0;
+}
+
+del {}
+
+details {}
+
+
+dl {
+  overflow: hidden;
+  margin: 0 0 $sp-base;
+	@include ms-respond(font-size, 1);
+}
+
+dt {
+  font-weight: $fw-bold;
+}
+
 img {
   max-width: 100% !important;
+  height: auto;
 }
+
+p {
+  margin: 0 0 $sp-base;
+}
+ol {
+  margin: 0 0 $sp-base $sp-base;
+  padding: 0;
+	line-height: $lh-base;
+	@include ms-respond(font-size, 1);
+  li {
+    margin-bottom: $sp-third;
+  }
+
+  ol,
+  ul {
+    @include ms-respond(font-size, -1);
+    margin: $sp-third 0 $sp-half $sp-base;
+  }
+}
+
+ul {
+  margin: 0 0 $sp-base $sp-base;
+  padding: 0;
+  line-height: $lh-base;
+  @include ms-respond(font-size, 1);
+
+  li {
+    margin-bottom: $sp-third;
+  }
+
+  ol,
+  ul {
+    @include ms-respond(font-size, -1);
+    margin: $sp-third 0 $sp-half $sp-base;
+  }
+}
+

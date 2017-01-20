@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "name": "$sp-triple",
+      "value": "4.5em",
+      "comment": "half spacing"
+    },
+    {
+      "name": "$sp-double",
+      "value": "3em",
+      "comment": "spacing base"
+    },
+
+    {
+      "name": "$sp-base",
+      "value": "1.5em",
+      "comment": "spacing base"
+    },
+    {
+      "name": "$sp-half",
+      "value": "0.75em",
+      "comment": "half spacing"
+    },
+    {
+      "name": "$sp-third",
+      "value": "0.5em",
+      "comment": "one third spacing"
+    }
+  ]
+}

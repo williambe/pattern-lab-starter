@@ -1,18 +1,3 @@
-@mixin button($alt: false) {
-  @include a-link($link: $c-white, $hover: $c-white, $deco--hover: "none");
-  background-color: $c-background-accent;
-  border-radius: $spacing--sm;
-  font-family: $ff--regular;
-  font-weight: $fw--700;
-  padding: ($spacing--sm * 3) ($spacing--l * 3);
-  display: inline-block;
-  text-decoration: none;
-  text-align: center;
-  @if $alt {
-    background: $c-background-light;
-    color: $c-accent;
-  }
-}
 
 .button {
   @include button();
