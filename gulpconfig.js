@@ -160,11 +160,11 @@ module.exports = {
       enabled: true,
       css: {
         src: 'images/icons/templates/_icons-settings.scss',
-        dest: 'source/_patterns/01-atoms/images/',
+        dest: 'source/_patterns/01-atoms/04-images/',
       },
       demo: {
         src: 'images/icons/templates/icons.twig',
-        dest: 'source/_patterns/01-atoms/images/',
+        dest: 'source/_patterns/01-atoms/04-images/',
       },
     },
     formats: [

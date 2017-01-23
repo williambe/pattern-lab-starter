@@ -15,7 +15,7 @@ component-libraries:
     paths:
       - source/_patterns/00-base
       - source/_patterns/00-base/00-settings
-      - source/_patterns/00-base/grids
+      - source/_patterns/00-base/02-generic/layout
   atoms:
     paths:
       - source/_patterns/01-atoms
@@ -23,9 +23,9 @@ component-libraries:
       - source/_patterns/01-atoms/00-branding/02-fonts
       - source/_patterns/01-atoms/02-typography/00-headings
       - source/_patterns/01-atoms/02-typography/01-text
-      - source/_patterns/01-atoms/02-typography/lists
-      - source/_patterns/01-atoms/buttons
-      - source/_patterns/01-atoms/images
+      - source/_patterns/01-atoms/02-typography/02-lists
+      - source/_patterns/01-atoms/03-buttons
+      - source/_patterns/01-atoms/04-images
   molecules:
     paths:
       - source/_patterns/02-molecules
