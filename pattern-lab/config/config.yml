@@ -57,11 +57,11 @@ plugins:
           - ../source/_patterns/01-atoms
           - ../source/_patterns/01-atoms/00-branding/01-colors
           - ../source/_patterns/01-atoms/00-branding/02-fonts
-          - ../source/_patterns/01-atoms/02-typography/00-headings
-          - ../source/_patterns/01-atoms/02-typography/01-text
-          - ../source/_patterns/01-atoms/02-typography/02-lists
-          - ../source/_patterns/01-atoms/03-buttons
-          - ../source/_patterns/01-atoms/04-images
+          - ../source/_patterns/01-atoms/01-typography/00-headings
+          - ../source/_patterns/01-atoms/01-typography/01-text
+          - ../source/_patterns/01-atoms/01-typography/02-lists
+          - ../source/_patterns/01-atoms/02-buttons
+          - ../source/_patterns/01-atoms/03-images
       molecules:
         paths:
           - ../source/_patterns/02-molecules

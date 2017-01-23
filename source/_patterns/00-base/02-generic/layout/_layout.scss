@@ -1,0 +1,8 @@
+.l-container {
+  width: 95vw;
+  margin: 0 auto;
+  @include clearfix();
+  @include breakpoint($bp--xlarge) {
+    max-width: 1170px;
+  }
+}

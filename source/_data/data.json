@@ -4,7 +4,6 @@
   "title": "Faker.words(2, true)",
   "text": "Faker.words(3, true)",
   "site_title": "Faker.words(2, true)",
-  "site_slogan": "Faker.words(5, true)",
   "headline": {
     "short": "Faker.words(3, true)",
     "medium": "Faker.words(7, true)"
