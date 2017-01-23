@@ -51,7 +51,6 @@ plugins:
         paths:
           - ../source/_patterns/00-base
           - ../source/_patterns/00-base/00-settings
-          - ../source/_patterns/00-base/animations-move/01-transitions
           - ../source/_patterns/00-base/grids
       atoms:
         paths:
