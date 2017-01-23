@@ -14,5 +14,8 @@
     "Drupal"
   ],
   "license": "GPL-2.0+",
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+  "require": {
+    "pattern-lab/plugin-data-inheritance": "^1.0"
+  }
 }

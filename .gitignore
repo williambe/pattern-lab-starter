@@ -10,6 +10,9 @@ source/_patterns/01-atoms/images/_icons-settings.scss
 bower_components
 node_modules
 
+# Vendor composer
+vendor
+
 # Generated files
 *.sass-cache/
 
