@@ -1,3 +1,4 @@
 .site-header {
-	background-color: red; 
+	padding: $sp-base 0;
+	@extend %l-container;
 }

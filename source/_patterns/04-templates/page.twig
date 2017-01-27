@@ -1,0 +1,16 @@
+{% if page.off_canvas %}
+	{% include "@organisms/side-menu/side-menu.twig" %}
+{% endif %}
+{% include "@organisms/site-header.twig" %}
+<main class="l-container {# debug #}">
+  {% block content %}
+    {{ page.content }}
+  {% endblock %}
+</main>
+{% if page.content_bottom %}
+	{{ page.content_bottom }}
+{% endif %}
+{% if page.highlighted %}
+	{{ page.highlighted }}
+{% endif %}
+{% include "@organisms/site-footer.twig" %}

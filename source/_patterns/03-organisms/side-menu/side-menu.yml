@@ -1,0 +1,13 @@
+sideMenu:
+  1:
+    url: "/"
+    text: "FRA"
+  2:
+    url: "/"
+    text: "ENG"
+  3:
+    url: "/"
+    text: "DEU"
+  4:
+    url: "/"
+    text: "ITA"

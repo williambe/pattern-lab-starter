@@ -206,4 +206,22 @@ module.exports = {
     // in this directory
     dir: './',
   },
+  // https://github.com/jkphl/gulp-svg-sprite
+  svgs: {
+    enabled: true,
+    src: "images/icons/src/*.svg",
+    dest: "dest/sprite",
+    configSvgs: {
+      mode: {
+        symbol: { // symbol mode to build the SVG
+          dest: '.', // destination folder
+          sprite: 'sprite.svg' //sprite name
+        }
+      },
+      svg: {
+        xmlDeclaration: false, // strip out the XML attribute
+        doctypeDeclaration: false // don't include the !DOCTYPE declaration
+      }
+    }
+  }
 };

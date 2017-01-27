@@ -1,15 +1,33 @@
 p {
-    @include ms-respond(font-size, 1);
-    line-height: $lh-base;
+  @include ms-respond(font-size, 1);
+  line-height: $lh-base;
   &.lead{
     @include ms-respond(font-size, 2);
     line-height: $lh-lead;
   }
+  &.small {
+    font-size: 0.85em;
+  }
 }
 
 a {
-  @include a-link;
+  color: $c-text-link;
+  // Improves readability when focused.
+  outline-offset: em(2px);
+  text-decoration: underline;
+
+  &:active {
+  }
+
+  &:hover,
+  &:focus {
+    color: $c-text-link-hover;
+  }
+
 }
+// a {
+//   @include a-link;
+// }
 
 blockquote {
   font-style: italic;

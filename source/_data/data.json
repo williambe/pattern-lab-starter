@@ -1,5 +1,7 @@
 {
   "pl": true,
+  "site_owner": "ACME Corp",
+  "site_logo": "../../../../logo.svg",
   "word": "Faker.words(1, true)",
   "title": "Faker.words(2, true)",
   "text": "Faker.words(3, true)",

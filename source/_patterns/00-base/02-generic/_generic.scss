@@ -1,20 +1,21 @@
 /* ==========================================================================
 Generic
-TOC
-- boxsizing
-- normalize
-- HTML elements (partial file)
-- typography (partial file)
-- layout (partial file)
 ========================================================================== */
+// TOC
+// - boxsizing
+// - normalize
+// - HTML elements (partial file)
+// - typography (partial file)
+// - layout (partial file)
 
 /* ==========================================================================
-Box-sizing
-
-@see:
-http://www.paulirish.com/2012/box-sizing-border-box-ftw/
-http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+box-sizing
 ========================================================================== */
+
+// @see:
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+// http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+
 html {
   box-sizing: border-box;
 }
@@ -22,7 +23,9 @@ html {
   box-sizing: inherit;
 }
 /* ==========================================================================
-normalize
-[Normalize](https://github.com/JohnAlbin/normalize-scss) - Better style reset
-installed using bower, imported in main scss file /scss/style.scss
+normalize-scss
 ========================================================================== */
+// [Normalize](https://github.com/JohnAlbin/normalize-scss) - Better style reset
+// installed using bower, imported in main scss file /scss/style.scss
+// included here, Should I open an issue in pattern-lab-starter?  
+@include normalize();

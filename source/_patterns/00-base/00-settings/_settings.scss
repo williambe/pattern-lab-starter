@@ -9,11 +9,7 @@ TOC
 - spacing
 ========================================================================== */
 
-
-
-/* ==========================================================================
-Colors (start with neutral tints)
-========================================================================== */
+// Colors (start with neutral tints)
 $c-default: gray;
 
 $c-default-darker: darken($c-default, 50%);
@@ -21,7 +17,6 @@ $c-default-dark: darken($c-default, 20%);
 
 $c-default-light: lighten($c-default, 20%);
 $c-default-lighter: lighten($c-default, 40%);
-
 
 $c-default-alt: teal;
 
@@ -32,9 +27,7 @@ $c-default-alt-light: lighten($c-default-alt, 20%);
 $c-default-alt-lighter: lighten($c-default-alt, 40%);
 
 
-/* --------------------------------------------------------------------------
-Colors definition (modify in branding/color))
--------------------------------------------------------------------------- */
+// Colors definition (modify in branding/color))
 $c-primary: 						$c-default !default;
 $c-primary-darker: 			$c-default-darker !default;
 $c-primary-dark: 				$c-default-dark !default;
@@ -55,10 +48,7 @@ $c-white: 							darken(white, 5%) !default;
 $c-gray: 								$c-default !default;
 $c-black: 							lighten(black, 5%) !default;
 
-/* --------------------------------------------------------------------------
-Colors application
--------------------------------------------------------------------------- */
-
+// Colors application
 $c-base: 								$c-primary !default;
 $c-accent: 							$c-secondary !default;
 
@@ -66,6 +56,12 @@ $c-background: 					$c-white !default;
 $c-background-light: 		$c-gray !default;
 $c-background-accent: 	$c-secondary !default;
 $c-background-invert: 	$c-primary !default;
+
+$c-button-primary:			$c-primary !default;
+$c-button-primary-text:	$c-white !default;
+$c-button-secondary:		$c-primary !default;
+$c-button-secondary-text:	$c-primary !default;
+$c-button-disabled:			$c-primary-lighter !default;
 
 $c-text: 								$c-primary !default;
 $c-text-alt: 						$c-primary-lighter !default;
@@ -80,18 +76,8 @@ $c-border: 							$c-primary !default;
 $c-border-invert: 			$c-secondary !default;
 $c-border-accent: 			$c-white !default;
 
-
-/* ==========================================================================
-Root sizes
-========================================================================== */
-$rs-max-width: 					1200px !default;
-$rs-base-font-size: 		16px !default;
-$rs-max-measure: 				675px !default;
-
-/* ==========================================================================
-breakpoint
-[Breakpoint](http://breakpoint-sass.com)
-========================================================================== */
+// breakpoint
+// [Breakpoint](http://breakpoint-sass.com)
 $bp--xsmall: 						23.75em; // 380px
 $bp--small: 						30em; // 480px
 $bp--medium: 						40em; // 640px
@@ -100,12 +86,13 @@ $bp--xlarge: 						64em; // 1024px
 $bp--xxlarge: 					78em; // 1248px
 $bp--xxxlarge: 					100em; // 1600px
 
-/* ==========================================================================
-Modular Scale
-========================================================================== */
-/* ----------------------------------------------------------------------- */
-// Scaling Variables
-/* ----------------------------------------------------------------------- */
+// Root sizes
+$rs-max-width: 					$bp--xxxlarge !default;
+$rs-base-font-size: 		16px !default;
+$rs-max-measure: 				675px !default;
+
+// Modular Scale
+// 		Scaling Variables
 // $phi: 							1.618034;
 // $golden: 					$phi;
 
@@ -127,33 +114,29 @@ Modular Scale
 // $minor-second: 		1.066666667;
 // $ms-base: 					1em !default;
 // $ms-ratio: 						$fourth;
-/* --------------------------------------------------------------------------
-Responsive scales
-@see https://github.com/modularscale/modularscale-sass#responsive-scales
--------------------------------------------------------------------------- */
+
+// Responsive scales
+//@see https://github.com/modularscale/modularscale-sass#responsive-scales
+$ms-ratio: $major-second;
 $ms-range:
   $major-second   		$bp--xsmall,
-  $fifth							$bp--xxlarge;
+  $fifth							$bp--xxxlarge;
 
 
 
 /* ==========================================================================
 typography
 ========================================================================== */
-/* --------------------------------------------------------------------------
-Font families
--------------------------------------------------------------------------- */
-/* --------------------------------------------------------------------------
-fonts in use
--------------------------------------------------------------------------- */
+// font families
+
+
+// fonts in use
 $ff-base: 						sans-serif !default; /* Used for all texts except headings */
 $ff-heading: 					sans-serif !default; /* Used for headings */
 $fu-ui: 							sans-serif !default;
 $ff-mono: 						monospace !default;
 
-/* --------------------------------------------------------------------------
-Font sizes
--------------------------------------------------------------------------- */
+// font sizes
 $fs-xsmall:						ms(-2) !default; /* xsmall  */
 $fs-small:						ms(-1) !default; /* p.small */
 $fs-base:							ms(0) !default; /* p, h6 */
@@ -164,16 +147,12 @@ $fs-xxlarge:					ms(4) !default; /* h2 */
 $fs-xxxlarge:					ms(5) !default; /* h1 */
 $fs-biggest:					ms(6) !default; /* page title */
 
-/* --------------------------------------------------------------------------
-Line heights
--------------------------------------------------------------------------- */
+// line heights
 $lh-base:							1.5;
 $lh-heading:					1.0;
 $lh-lead:							1.7; // as seen on uswds
 
-/* --------------------------------------------------------------------------
-Font weights
--------------------------------------------------------------------------- */
+// font weights
 $fw-thin:							100; /* thin/hairline */
 $fw-extra-light: 			200; /* extra-light/ultra-light */
 $fw-light: 						300; /* light */
@@ -184,12 +163,17 @@ $fw-bold: 						700; /* bold* */
 $fw-extra-bold: 			800; /* extra-bold/ultra-bold */
 $fw-black: 						900; /* black/heavy */
 
-/* ==========================================================================
-spacing
-========================================================================== */
+// text decoration
+$td-none:							none;
+$td-underline:				underline;
+
+// spacing
 $sp-base: 						1.5em;
-$sp-half:							$sp-base/2;
-$sp-third:						$sp-base/3;
-$sp-double:						$sp-base*2;
+$sp-half:							$sp-base/2; // 0.75em
+$sp-third:						$sp-base/3;	// 0.50em
+$sp-double:						$sp-base*2; // 3em
 $sp-triple:						$sp-base*3;
+
+// border radius
+$br-none:							0;
 

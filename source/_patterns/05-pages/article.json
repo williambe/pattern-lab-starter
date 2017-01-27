@@ -1,0 +1,11 @@
+{
+	"page": {
+		"off_canvas": 1,
+		"content": {
+			"include()": {
+				"pattern": "article.twig"
+			}
+		}
+	}
+
+}

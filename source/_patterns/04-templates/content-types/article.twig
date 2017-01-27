@@ -1,0 +1,20 @@
+{% extends "@templates/page.twig" %}
+{% block content %}
+	{% include "@molecules/cover.twig" 
+		with {
+			'background_image': page.content.cover.background_image
+	}
+	%}
+	<article class="l-main">
+		<h1>Header 1</h1>
+		<p class="lead"><b>Paragraph Lead</b> {{ description }}</p>
+		<p><b>Paragraph</b> following an <code>h1</code> {{ description }}</p>
+
+		<h2>Header 2</h2>
+		<p><b>Paragraph</b> following an <code>h2</code> {{ description }}</p>
+
+		<h3>Header 3</h3>
+		<p><b>Paragraph</b> following an <code>h3</code> {{ description }}</p>
+	</article>
+
+{% endblock %}
