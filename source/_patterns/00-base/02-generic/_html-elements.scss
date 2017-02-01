@@ -35,8 +35,13 @@ img {
 }
 
 p {
-  margin: 0 0 $sp-base;
+  margin: 0;
 }
+
+p+p {
+  text-indent: $sp-base;
+}
+
 ol {
   margin: 0 0 $sp-base $sp-base;
   padding: 0;

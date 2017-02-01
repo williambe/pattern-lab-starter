@@ -1,4 +1,5 @@
 .site-header {
 	padding: $sp-base 0;
+	position: relative;
 	@extend %l-container;
 }

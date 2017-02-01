@@ -1,4 +1,5 @@
 .branding {
+	@include grid-span (4, 1);
   &__logo {
     
   }
