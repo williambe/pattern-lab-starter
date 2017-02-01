@@ -1,5 +1,5 @@
 @include sgs-change('debug', true);
-@include add-gutter(1/3);
+@include add-gutter(1);
 
 
 
@@ -23,7 +23,7 @@
 }
 
 %l-main, .l-main {
-	width: 100vw;
+	width: 100%;
 	@include breakpoint($bp--large) {
   	@include grid-span (8, 4);
 	}
