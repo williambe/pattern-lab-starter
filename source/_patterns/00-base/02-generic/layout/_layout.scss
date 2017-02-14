@@ -12,6 +12,15 @@
     max-width: $rs-max-width;
   }
 }
+
+%l-main, .l-main {
+	width: 100%;
+	@include breakpoint($bp--large) {
+		// background-color: red;
+  	@include grid-span (10, 3);
+	}
+}
+
 %l-fw, .l-fw {
 	position: relative;
 	width: 100vw;
@@ -20,11 +29,4 @@
 	margin-left: -50vw;
 	margin-right: -50vw;
 	overflow: hidden;
-}
-
-%l-main, .l-main {
-	width: 100%;
-	@include breakpoint($bp--large) {
-  	@include grid-span (8, 4);
-	}
 }

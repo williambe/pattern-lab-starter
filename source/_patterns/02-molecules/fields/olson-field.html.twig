@@ -1,0 +1,39 @@
+{%
+  set classes = classes ?: [
+    'field',
+    'field--name-' ~ field_name|clean_class
+  ]
+%}
+
+{% set item_classes = item_classes ? item_classes %}
+
+{% set label_class = label_class ?: 'field__label' %}
+
+{% set label_element = label_element ?: 'div' %}
+
+{% set wrapper_element = wrapper_element ?: 'div' %}
+
+{% set element = element ?: 'div' %}
+
+{% block content %}
+  {% if label_hidden %}
+    {% if multiple %}
+      <{{ wrapper_element }}{{ attributes.addClass(classes) }}>
+        {% for item in items %}
+          <{{ element }}{{ item.attributes.addClass(item_classes) }}>{{ item.content }}</{{ element }}>
+        {% endfor %}
+      </{{ wrapper_element }}>
+    {% else %}
+      {% for item in items %}
+        <{{ element }}{{ attributes.addClass(classes) }}>{{ item.content }}</{{ element }}>
+      {% endfor %}
+    {% endif %}
+  {% else %}
+    <{{ wrapper_element }}{{ attributes.addClass(classes) }}>
+      <{{ label_element }}{{ title_attributes.addClass(label_class) }}>{{ label }}</{{ label_element }}>
+      {% for item in items %}
+        <{{ element }}{{ item.attributes.addClass(item_classes) }}>{{ item.content }}</{{ element }}>
+      {% endfor %}
+    </{{ wrapper_element }}>
+  {% endif %}
+{% endblock content %}

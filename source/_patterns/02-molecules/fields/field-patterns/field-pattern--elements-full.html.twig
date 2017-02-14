@@ -1,0 +1,60 @@
+{%
+  set classes = classes ?: [
+    'field',
+    'field--' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+  ]
+%}
+
+{% set label_class = label_class ?: [
+		'field__label',
+		label_display == 'visually_hidden' ? 'visually-hidden',
+	]
+%}
+{% set item_classes = item_classes ?: [
+		'field__item',
+	]
+%}
+
+{% set label_element = label_element ?: 'div' %}
+{% set wrapper_element = wrapper_element ?: 'div' %}
+{% set items_wrapper_element = items_wrapper_element ?: 'div' %}
+{% set element = element ?: 'div' %}
+
+{% set item_classes = item_classes ? item_classes %}
+{% set item_custom_classes = item_custom_classes ? item_custom_classes %}
+
+
+{# {% set attributes = attributes.addClass(classes, moreClasses) %}
+{% set opening_tag %} <{{ element }}{{ attributes }}>{% endset %}
+{% set closing_tag %} </{{ element }}>{% endset %} #}
+
+{% block content %}
+  {% if label_hidden %}
+    {% if multiple %}
+      <{{ items_wrapper_element }}{{ attributes.addClass(classes, 'field__items') }}>
+        {% for item in items %}
+          <{{ element }}{{ item.attributes.addClass(item_classes) }}>{{ item.content }}</{{ element }}>
+        {% endfor %}
+      </{{ items_wrapper_element }}>
+    {% else %}
+      {% for item in items %}
+        <{{ element }}{{ attributes.addClass(classes, item_classes, item_custom_classes) }}>{{ item.content }}</{{ element }}>
+      {% endfor %}
+    {% endif %}
+  {% else %}
+    <{{ wrapper_element }}{{ attributes.addClass(classes) }}>
+      <{{ label_element }}{{ title_attributes.addClass(label_class) }}>{{ label }}</{{ label_element }}>
+	    {% if multiple %}
+	      <{{ items_wrapper_element }}{{ attributes.addClass('field__items') }}>
+	    {% endif %}
+      {% for item in items %}
+        <{{ element }}{{ item.attributes.addClass(item_classes, item_custom_classes) }}>{{ item.content }}</{{ element }}>
+      {% endfor %}
+	    {% if multiple %}
+	      </{{ items_wrapper_element }}>
+	    {% endif %}
+    </{{ wrapper_element }}>
+  {% endif %}
+{% endblock content %}

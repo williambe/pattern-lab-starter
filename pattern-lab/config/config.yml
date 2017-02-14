@@ -72,7 +72,10 @@ plugins:
           - ../source/_patterns/02-molecules/branding
           - ../source/_patterns/02-molecules/caption-block
           - ../source/_patterns/02-molecules/cover
+          - ../source/_patterns/02-molecules/fields
+          - ../source/_patterns/02-molecules/fields/field-patterns
           - ../source/_patterns/02-molecules/navigation
+          - ../source/_patterns/02-molecules/page-title
       organisms:
         paths:
           - ../source/_patterns/03-organisms

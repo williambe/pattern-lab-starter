@@ -1,4 +1,4 @@
-<article{{ attributes }}>
+<article{{ attributes.addClass('l-main') }}>
 
   {{ title_prefix }}
   {% if not page %}
@@ -7,6 +7,14 @@
     </h2>
   {% endif %}
   {{ title_suffix }}
+
+
+  {% set title_not_empty = content.field_title|render|trim is not empty %}
+  {% if title_not_empty %}
+    {{ content.field_title }}
+  {% else %}
+    {{ label }}
+  {% endif %}
 
   {% if display_submitted %}
     <footer>
@@ -18,8 +26,11 @@
     </footer>
   {% endif %}
 
-  <div{{ content_attributes }}>
-    {{ content }}
-  </div>
+  {{ content.field_summary }}
+  {{ content.field_content_body }}
 
+{#   <div{{ content_attributes.addClass("test_class") }}>
+    {{ content|without('field_title','field_seo_title','field_summary','field_content_body') }}
+  </div>
+ #}
 </article>

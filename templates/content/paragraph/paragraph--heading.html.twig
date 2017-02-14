@@ -1,0 +1,13 @@
+{%
+set classes = [
+'paragraph',
+'paragraph--type--' ~ paragraph.bundle|clean_class,
+view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+]
+%}
+
+{% set element = element ?: content.field_heading_level[0] %}
+	
+<{{ element }}{{ attributes.addClass(classes) }}>
+    {{ content.field_paragraph_title }}
+</{{ element }}>
