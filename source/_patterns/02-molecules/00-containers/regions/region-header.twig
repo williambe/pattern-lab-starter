@@ -1,0 +1,12 @@
+{% embed "@molecules/region.twig"
+    with {
+        "element": "header",
+        "classes": "page-header"
+    }
+%}
+{% block content %}
+  {{ content }}
+  {% include "@molecules/menu-trigger.twig" %}
+{% endblock %}
+
+{% endembed %}

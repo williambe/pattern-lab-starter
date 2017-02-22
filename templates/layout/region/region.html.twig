@@ -32,7 +32,9 @@ if you need it its simple enough to add in:
 {% if content %}
     {{ content }}
 {% endif %} #}
-{% if content %}
+
+
+{# {% if content %}
   {%
     set classes = [
       'region',
@@ -45,4 +47,15 @@ if you need it its simple enough to add in:
       {{ content }}
     </section>
   {% endblock %}
-{% endif %}
+{% endif %} #}
+
+{% set classes = [
+'region',
+'region--' ~ region|clean_class,
+] %}
+
+{% include "@molecules/region.twig"
+with {
+  "element": "section"
+}
+%}

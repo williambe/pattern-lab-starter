@@ -179,7 +179,7 @@ module.exports = {
     port: 3050,
     watchFiles: [],
     // enable when full CMS is set up
-    // domain: 'mysite.dev',
+    // domain: 'http://sandbox3.drupalvm5.dev/',
     baseDir: './',
     startPath: 'pattern-lab/public/',
     openBrowserAtStart: false,

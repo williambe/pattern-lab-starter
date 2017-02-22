@@ -1,7 +1,12 @@
-{% if page.off_canvas %}
-	{% include "@organisms/side-menu/side-menu.twig" %}
-{% endif %}
-{% include "@organisms/site-header.twig" %}
+{# {% block offcanvas %}
+	{% if page.offcanvas %} #}
+			{# {% include "@organisms/side-menu.twig" %} #}
+{# 	{% endif %}
+{% endblock %}
+ #}
+{{page.offcanvas}}
+{{page.header}}
+{# {% include "@organisms/site-header.twig" %} #}
 <main class="l-container {# debug #}">
   {% block content %}
     {{ page.content }}
@@ -13,4 +18,6 @@
 {% if page.highlighted %}
 	{{ page.highlighted }}
 {% endif %}
-{% include "@organisms/site-footer.twig" %}
+{% if page.footer %}
+	{{ page.footer }}
+{% endif %}

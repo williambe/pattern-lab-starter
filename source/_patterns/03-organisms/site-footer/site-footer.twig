@@ -1,0 +1,13 @@
+{# <footer class="site-footer">
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+  <div class="footer-legal"><p class="small">© {{ "now"|date("Y") }} {{ site_owner }}</p></div>
+</footer>
+ #}
+
+ {% include "@molecules/region.twig"
+with {
+  "element": "footer"
+}
+%}

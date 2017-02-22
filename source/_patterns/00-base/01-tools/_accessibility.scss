@@ -25,6 +25,9 @@ TOC
   word-wrap: normal;
 }
 
+.visually-hidden {
+  @include visually-hidden;
+}
 @mixin visually-hidden-important {
   clip: rect(1px, 1px, 1px, 1px) !important;
   height: 1px !important;

@@ -12,15 +12,20 @@
  * @see template_preprocess_region()
  */
 #}
-{% extends "region.html.twig" %}
-{%
+{# {%
   set classes = [
     'region',
     'region-' ~ region|clean_class,
     'row',
   ]
 %}
+ #}
+{% embed "@molecules/region-header.twig"
+with {
+"element": "div"
+} %}
+{% endembed %}
 
-{% block template %}
-  {% include "@organisms/site/site-header/site-header.twig" %}
-{% endblock %}
+{# {% block template %}
+  {% include "@organisms/site-header.twig" %}
+{% endblock %} #}

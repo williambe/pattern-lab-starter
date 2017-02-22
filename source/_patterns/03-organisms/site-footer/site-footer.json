@@ -1,0 +1,23 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "region--footer"
+      ]
+    }
+  },
+  "content": {
+    "join()": [
+      {
+        "include()": {
+          "pattern": "molecules-menu"
+        }
+      },
+      {
+        "include()": {
+          "pattern": "molecules-footer--legal"
+        }
+      }
+    ]
+  }
+}

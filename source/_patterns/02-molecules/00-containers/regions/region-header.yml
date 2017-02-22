@@ -1,0 +1,12 @@
+---
+region: header
+attributes:
+  Attribute():
+    class:
+    - region
+    - region--header
+    - site-header
+content:
+  join():
+  - include():
+      pattern: molecules-branding

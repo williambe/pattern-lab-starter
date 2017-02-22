@@ -1,0 +1,7 @@
+{% block content %}
+{% if site_logo %}
+<a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+  <img class="branding__logo" src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+</a>
+{% endif %}
+{% endblock %}

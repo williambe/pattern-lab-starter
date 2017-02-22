@@ -1,0 +1,17 @@
+{% set classes = [
+'region',
+'offcanvas',
+'region--offcanvas'
+] %}
+
+<div>
+	{% embed "@molecules/region.twig" %}
+			{% block content %}
+			{% include "@molecules/menu-trigger.twig" %}
+			<div class="offcanvas--content inverted">
+			  {{ content }}
+			</div>
+			{% endblock %}	
+	{% endembed %}
+	<div class="offcanvas--cover"></div>
+</div>

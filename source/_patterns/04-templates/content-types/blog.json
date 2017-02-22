@@ -1,0 +1,12 @@
+{
+	"page": {
+		"offcanvas": 1,
+		"content": {
+			"cover": {
+				"attributes": "cover",
+				"background_image": "/images/fpo_16x9.png"
+			}
+		}
+	}
+
+}

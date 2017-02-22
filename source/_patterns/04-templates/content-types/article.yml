@@ -1,0 +1,24 @@
+---
+page:
+  offcanvas:
+    include():
+      pattern: molecules-region-offcanvas
+      with:
+        region: offcanvas
+        attributes:
+          Attribute():
+            class:
+            - offcanvas
+  header:
+    include():
+      pattern: molecules-region-header
+      with:
+        region: header
+        attributes:
+          Attribute():
+            class:
+            - site-header
+  content:
+    cover:
+      attributes: cover
+      background_image: "/images/fpo_16x9.png"

@@ -1,0 +1,36 @@
+{% set classes = [
+'region',
+region|clean_class,
+'region--' ~ region|clean_class,
+] %}
+
+
+{% set element = element ?: 'section' %}
+
+{% set label_element = label_element ?: 'h2' %}
+
+
+
+{% if content %}
+  {% if element is not empty %}
+    <{{ element ?: "section" }}{{ attributes.addClass(classes) }}>
+  {% endif %}
+
+  {% if display_title != false  %}
+    {{ title_prefix }}
+    {% if label %}
+      {% set title_classes = title_classes ?: "block__content" %}
+      <{{ label_element ?: "h2" }}{{ title_attributes.addClass(title_classes) }}>{{ label }}</{{ label_element ?: "h2" }}>
+    {% endif %}
+    {{ title_suffix }}
+  {% endif %}
+
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+
+    {% if element is not empty %}
+      </{{ element ?: "section" }}>
+    {% endif %}
+
+{% endif %}

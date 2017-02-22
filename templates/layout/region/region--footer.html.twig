@@ -12,8 +12,13 @@
  * @see template_preprocess_region()
  */
 #}
-{% extends "region.html.twig" %}
+{% set classes = [
+'region',
+'region--' ~ region|clean_class,
+] %}
 
-{% block template %}
-	{% include "@organisms/site/site-footer/site-footer.twig" %}
-{% endblock %}
+{% include "@molecules/region.twig"
+with {
+  "element": "footer"
+}
+%}

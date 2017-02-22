@@ -1,0 +1,46 @@
+.offcanvas {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: $c-secondary;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(140%);
+  will-change: transform;
+  transition: transform 0.52s ease;
+  z-index: 900;
+  @include breakpoint($bp--large) {
+    width: 75vw;
+  }
+}
+
+.offcanvas--cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #22272D;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.offcanvas--content {
+  padding: 1em 1em 1em 4em;
+  position: relative;
+}
+
+.is-offcanvas-open {
+  .offcanvas--cover {
+    opacity: 0.3;
+    visibility: visible;
+    z-index: 899;
+  }
+  .offcanvas {
+    transform: translateX(0);
+  }
+}
+
+

@@ -1,0 +1,10 @@
+---
+attributes:
+  Attribute():
+    class:
+    - region
+    - region--offcanvas
+content:
+  join():
+  - include():
+      pattern: molecules-menu
