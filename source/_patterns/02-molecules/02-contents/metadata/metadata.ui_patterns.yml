@@ -1,0 +1,13 @@
+article_metadata:
+  label: Article Metadata
+  description: a group of data to show article related meta information
+  fields:
+    author:
+      type: text
+      label: Author
+      description: Article author
+      preview: Admin
+    date:
+      type: text
+      label: Date
+      description: Article date

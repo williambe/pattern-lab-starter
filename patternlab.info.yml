@@ -24,11 +24,14 @@ component-libraries:
       - source/_patterns/01-atoms/00-branding/01-colors
       - source/_patterns/01-atoms/00-branding/02-fonts
       - source/_patterns/01-atoms/00-branding/favicon
+      - source/_patterns/01-atoms/01-typography/00-headings/heading-1
+      - source/_patterns/01-atoms/01-typography/00-headings/heading-2
       - source/_patterns/01-atoms/01-typography/00-headings
       - source/_patterns/01-atoms/01-typography/01-text
       - source/_patterns/01-atoms/01-typography/02-lists
       - source/_patterns/01-atoms/02-buttons
       - source/_patterns/01-atoms/03-images
+      - source/_patterns/01-atoms/03-images/landscape-3x2
       - source/_patterns/01-atoms/04-video
       - source/_patterns/01-atoms/05-form-elements/checkbox
       - source/_patterns/01-atoms/05-form-elements/input
@@ -46,8 +49,12 @@ component-libraries:
       - source/_patterns/02-molecules/02-contents/accordion-item
       - source/_patterns/02-molecules/02-contents/branding
       - source/_patterns/02-molecules/02-contents
+      - source/_patterns/02-molecules/02-contents/card
+      - source/_patterns/02-molecules/02-contents/code
       - source/_patterns/02-molecules/02-contents/cover
       - source/_patterns/02-molecules/02-contents/footer--legal
+      - source/_patterns/02-molecules/02-contents/metadata
+      - source/_patterns/02-molecules/02-contents/shila-image
       - source/_patterns/02-molecules/03-navigation/breadcrumbs
       - source/_patterns/02-molecules/03-navigation/menu-trigger
       - source/_patterns/02-molecules/03-navigation/menu
@@ -57,6 +64,7 @@ component-libraries:
   organisms:
     paths:
       - source/_patterns/03-organisms
+      - source/_patterns/03-organisms/grid-cards
       - source/_patterns/03-organisms/side-menu
       - source/_patterns/03-organisms/site-footer
       - source/_patterns/03-organisms/site-header

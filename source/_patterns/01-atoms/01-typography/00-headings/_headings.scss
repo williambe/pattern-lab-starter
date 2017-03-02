@@ -1,40 +1,41 @@
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1, .h1, .heading-1,
+h2, .h2, .heading-2,
+h3, .h3, .heading-3,
+h4, .h4, .heading-4,
+h5, .h5, .heading-5,
+h6, .h6, .heading-6 {
   color: $c-text-headings;
 	font-family: $ff-heading;
 	line-height: $lh-heading;
-	margin: 1em 0 0.5em;
+	margin: 0 0 0.5em;
+  width: 100%; // For inline elements with these styles
 }
 
-h1, .h1 {
+h1, .h1, .heading-1 {
   @include ms-respond(font-size, 5);
   &--inverted {
     color: $c-white;
   }
 }
 
-h2, .h2 {
+h2, .h2, .heading-2 {
   @include ms-respond(font-size, 4);
   color: $c-text-headings-alt;
 }
 
-h3, .h3 {
+h3, .h3, .heading-3 {
   @include ms-respond(font-size, 3);
 }
 
-h4, .h4 {
+h4, .h4, .heading-4 {
   @include ms-respond(font-size, 2);
 }
 
-h5, .h5 {
+h5, .h5, .heading-5  {
   @include ms-respond(font-size, 1);
 }
 
-h6, .h6 {
+h6, .h6, .heading-6  {
   @include ms-respond(font-size, 0);
 }
 

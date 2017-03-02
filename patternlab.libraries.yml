@@ -10,3 +10,10 @@ core:
   dependencies:
     - core/jquery
     - core/drupal
+prismjs:
+  version: 1.x
+  css:
+    theme:
+      source/_patterns/02-molecules/02-contents/code/prism.css: {}
+  js:
+    source/_patterns/02-molecules/02-contents/code/prism.js: {}
